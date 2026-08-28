@@ -1,0 +1,2923 @@
+{
+  "surface": "dashboard",
+  "manifest": {
+    "version": 1,
+    "surface": "dashboard",
+    "title": "Codex | ChatGPT Plugins Index",
+    "description": "Skills / Plugins / Apps Package Market Data Insights — a reproducible, metadata-backed market index.",
+    "generatedAt": "2026-08-28T04:36:36.273Z",
+    "cards": [
+      {
+        "id": "universal_catalog",
+        "description": "User-visible /plugins directory after the TUI hides CLI-only bundles.",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◉ Universal directory",
+            "field": "universal_plugins",
+            "format": "number"
+          },
+          {
+            "label": "Raw App Server",
+            "field": "raw_plugins",
+            "format": "number"
+          },
+          {
+            "label": "Hidden bundles",
+            "field": "hidden_bundled",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "cli_snapshot",
+        "description": "Configured marketplace catalog rows visible to the plugin CLI command.",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◇ CLI catalog rows",
+            "field": "cli_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "git_marketplace",
+        "description": "Standard curated marketplace and its API-key-compatible subset.",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◆ Git marketplace",
+            "field": "repo_plugins",
+            "format": "number"
+          },
+          {
+            "label": "API-key subset",
+            "field": "api_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "skills_surface",
+        "description": "Immediate reusable skill entrypoints across plugins that contain skills directories.",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "▦ Skill entrypoints",
+            "field": "skill_entrypoints",
+            "format": "number"
+          },
+          {
+            "label": "Plugins with skills",
+            "field": "plugins_with_skills",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "apps_surface",
+        "description": "App references and distinct App ids declared by official Git marketplace packages.",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◌ Unique App ids",
+            "field": "unique_app_ids",
+            "format": "number"
+          },
+          {
+            "label": "App references",
+            "field": "app_references_total",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "projection_delta",
+        "description": "Exact adjustment from the raw App Server catalog to the TUI-visible market view.",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "↔ Hidden bundled rows",
+            "field": "hidden_bundled",
+            "format": "number"
+          },
+          {
+            "label": "Raw App Server",
+            "field": "raw_plugins",
+            "format": "number"
+          },
+          {
+            "label": "PTY visible",
+            "field": "universal_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "live_concentration",
+        "description": "Share of the live catalog in Productivity and Business & Operations.",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◉ Top 2 category share",
+            "field": "top_two_category_share",
+            "format": "percent"
+          },
+          {
+            "label": "Productivity",
+            "field": "productivity_plugins",
+            "format": "number"
+          },
+          {
+            "label": "Business & Operations",
+            "field": "business_ops_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "git_developer_mix",
+        "description": "Developer Tools share of the standard openai/plugins marketplace.",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◆ Developer Tools share",
+            "field": "git_developer_share",
+            "format": "percent"
+          },
+          {
+            "label": "Developer Tools",
+            "field": "git_developer_plugins",
+            "format": "number"
+          },
+          {
+            "label": "Git marketplace",
+            "field": "repo_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "api_coverage",
+        "description": "Name-level coverage of the standard Git marketplace in the API-key subset.",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "⌁ API-key coverage",
+            "field": "api_coverage",
+            "format": "percent"
+          },
+          {
+            "label": "API-key subset",
+            "field": "api_plugins",
+            "format": "number"
+          },
+          {
+            "label": "Standard",
+            "field": "repo_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "third_party_catalog",
+        "description": "Universal-directory plugins with a named non-OpenAI developer provider.",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◎ Third-party share",
+            "field": "third_party_share",
+            "format": "percent"
+          },
+          {
+            "label": "Third-party plugins",
+            "field": "third_party_plugins",
+            "format": "number"
+          },
+          {
+            "label": "Universal directory",
+            "field": "universal_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "provider_breadth",
+        "description": "Distinct named third-party developer providers in the live catalog.",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◎ Third-party providers",
+            "field": "distinct_third_party_providers",
+            "format": "number"
+          },
+          {
+            "label": "Third-party plugins",
+            "field": "third_party_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "provider_url_coverage",
+        "description": "Universal-directory plugin rows with an exact metadata website URL.",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "↗ Website coverage",
+            "field": "provider_website_coverage",
+            "format": "percent"
+          },
+          {
+            "label": "Linked rows",
+            "field": "provider_website_linked",
+            "format": "number"
+          },
+          {
+            "label": "Universal directory",
+            "field": "universal_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "git_provider_mix",
+        "description": "Official Git packages whose manifest developer/author is non-OpenAI.",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◆ Git third-party share",
+            "field": "git_third_party_share",
+            "format": "percent"
+          },
+          {
+            "label": "Third-party packages",
+            "field": "git_third_party_packages",
+            "format": "number"
+          },
+          {
+            "label": "Git marketplace",
+            "field": "repo_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "app_provider_mix",
+        "description": "Git .app.json references contributed by third-party package providers.",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◌ Third-party App refs",
+            "field": "third_party_app_share",
+            "format": "percent"
+          },
+          {
+            "label": "Third-party refs",
+            "field": "third_party_app_references",
+            "format": "number"
+          },
+          {
+            "label": "All App refs",
+            "field": "app_references_total",
+            "format": "number"
+          }
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "id": "inventory_planes_chart",
+        "question": "Plugin inventory by market source",
+        "intent": "comparison",
+        "rationale": "Five named market sources and one magnitude measure fit a horizontal comparison bar.",
+        "title": "Plugin inventory by market source",
+        "subtitle": "Five distinct market sources and catalog views; exact origin and freshness remain in the tooltip and data source.",
+        "type": "horizontalBar",
+        "dataset": "inventory_planes",
+        "sourceId": "inventory_planes_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "plane",
+            "type": "nominal",
+            "label": "Market source / view"
+          },
+          "y": {
+            "field": "total",
+            "type": "quantitative",
+            "label": "Rows",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "total",
+              "type": "quantitative",
+              "label": "Rows",
+              "format": "number"
+            },
+            {
+              "field": "source",
+              "type": "nominal",
+              "label": "Source"
+            },
+            {
+              "field": "freshness",
+              "type": "nominal",
+              "label": "Freshness"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tui_categories_chart",
+        "question": "Universal directory plugins by category",
+        "intent": "comparison",
+        "rationale": "Fourteen long category labels need sorted horizontal bars for direct magnitude comparison.",
+        "title": "Universal directory plugins by category",
+        "subtitle": "3,312 TUI-visible entries on 2026-08-28; categories are mutually exclusive.",
+        "type": "horizontalBar",
+        "dataset": "tui_categories",
+        "sourceId": "tui_categories_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "category",
+            "type": "nominal",
+            "label": "Category"
+          },
+          "y": {
+            "field": "count",
+            "type": "quantitative",
+            "label": "Count",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "count",
+              "type": "quantitative",
+              "label": "Count",
+              "format": "number"
+            },
+            {
+              "field": "share",
+              "type": "quantitative",
+              "label": "Share",
+              "format": "percent"
+            },
+            {
+              "field": "rank",
+              "type": "quantitative",
+              "label": "Rank",
+              "format": "number"
+            }
+          ]
+        }
+      },
+      {
+        "id": "third_party_categories_chart",
+        "question": "Third-party plugins by category",
+        "intent": "comparison",
+        "rationale": "Fourteen categories with long labels and one comparable package count fit a horizontal bar.",
+        "title": "Third-party plugins by category",
+        "subtitle": "3,259 plugins across 2,857 named third-party providers.",
+        "type": "horizontalBar",
+        "dataset": "third_party_categories",
+        "sourceId": "third_party_categories_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "category",
+            "type": "nominal",
+            "label": "Category"
+          },
+          "y": {
+            "field": "plugin_count",
+            "type": "quantitative",
+            "label": "Third-party plugins",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "plugin_count",
+              "type": "quantitative",
+              "label": "Third-party plugins",
+              "format": "number"
+            },
+            {
+              "field": "provider_count",
+              "type": "quantitative",
+              "label": "Providers",
+              "format": "number"
+            },
+            {
+              "field": "share",
+              "type": "quantitative",
+              "label": "Third-party share",
+              "format": "percent"
+            }
+          ]
+        }
+      },
+      {
+        "id": "top_third_party_providers_chart",
+        "question": "Top third-party providers by plugin count",
+        "intent": "comparison",
+        "rationale": "Eight provider names and one count measure fit a bounded horizontal ranking.",
+        "title": "Top third-party providers by plugin count",
+        "subtitle": "Bounded top 8; provider identity and URLs come directly from catalog metadata.",
+        "type": "horizontalBar",
+        "dataset": "top_third_party_providers",
+        "sourceId": "top_third_party_providers_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "provider",
+            "type": "nominal",
+            "label": "Provider"
+          },
+          "y": {
+            "field": "plugin_count",
+            "type": "quantitative",
+            "label": "Plugins",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "plugin_count",
+              "type": "quantitative",
+              "label": "Plugins",
+              "format": "number"
+            },
+            {
+              "field": "category_count",
+              "type": "quantitative",
+              "label": "Categories",
+              "format": "number"
+            },
+            {
+              "field": "sample_plugins",
+              "type": "nominal",
+              "label": "Examples"
+            },
+            {
+              "field": "url",
+              "type": "nominal",
+              "label": "Metadata URL"
+            }
+          ]
+        }
+      },
+      {
+        "id": "category_positioning_chart",
+        "question": "How does category emphasis differ between the universal directory and Git marketplace?",
+        "intent": "relationship",
+        "rationale": "Fourteen same-grain category observations support a labeled scatter; both axes are shares with explicit denominators.",
+        "title": "Category share: universal directory vs Git marketplace",
+        "subtitle": "14 labeled categories · x = share of 3,312 TUI rows · y = share of 62 Git packages",
+        "type": "scatter",
+        "dataset": "category_positioning",
+        "sourceId": "category_positioning_sql",
+        "valueFormat": "percent",
+        "xAxisTitle": "Share of universal directory",
+        "yAxisTitle": "Share of Git marketplace",
+        "maxRows": 14,
+        "palette": {
+          "kind": "categorical",
+          "name": "openai-semantic"
+        },
+        "legend": {
+          "position": "bottom",
+          "title": "Relative emphasis"
+        },
+        "comparisonContext": {
+          "grain": "category",
+          "denominator": "3312 TUI-visible rows vs 62 Git packages",
+          "unit": "fractional share"
+        },
+        "encodings": {
+          "x": {
+            "field": "universal_share",
+            "type": "quantitative",
+            "label": "Universal share",
+            "format": "percent"
+          },
+          "y": {
+            "field": "git_share",
+            "type": "quantitative",
+            "label": "Git share",
+            "format": "percent"
+          },
+          "color": {
+            "field": "relative_emphasis",
+            "type": "nominal",
+            "label": "Relative emphasis"
+          },
+          "label": {
+            "field": "category",
+            "type": "nominal",
+            "label": "Category"
+          },
+          "tooltip": [
+            {
+              "field": "category",
+              "type": "nominal",
+              "label": "Category"
+            },
+            {
+              "field": "universal_count",
+              "type": "quantitative",
+              "label": "Universal count",
+              "format": "number"
+            },
+            {
+              "field": "universal_share",
+              "type": "quantitative",
+              "label": "Universal share",
+              "format": "percent"
+            },
+            {
+              "field": "git_count",
+              "type": "quantitative",
+              "label": "Git count",
+              "format": "number"
+            },
+            {
+              "field": "git_share",
+              "type": "quantitative",
+              "label": "Git share",
+              "format": "percent"
+            },
+            {
+              "field": "share_delta",
+              "type": "quantitative",
+              "label": "Git minus universal",
+              "format": "percent"
+            }
+          ]
+        }
+      },
+      {
+        "id": "cli_marketplaces_chart",
+        "question": "CLI catalog rows by configured marketplace",
+        "intent": "comparison",
+        "rationale": "Three catalog sources with one comparable count fit a compact horizontal bar.",
+        "title": "CLI catalog rows by configured marketplace",
+        "subtitle": "195 catalog rows; the managed curated source is revision 11c74d6b.",
+        "type": "horizontalBar",
+        "dataset": "cli_marketplaces",
+        "sourceId": "cli_marketplaces_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "marketplace",
+            "type": "nominal",
+            "label": "Marketplace"
+          },
+          "y": {
+            "field": "total",
+            "type": "quantitative",
+            "label": "Rows",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "total",
+              "type": "quantitative",
+              "label": "Rows",
+              "format": "number"
+            }
+          ]
+        }
+      },
+      {
+        "id": "component_counts_chart",
+        "question": "Plugin package surface counts",
+        "intent": "comparison",
+        "rationale": "Seven named package surfaces fit a high-contrast horizontal comparison with a shared zero baseline.",
+        "title": "Plugin package surface counts",
+        "subtitle": "Counts are overlapping inventories, not parts of a whole.",
+        "type": "horizontalBar",
+        "dataset": "component_counts_chart",
+        "sourceId": "component_counts_chart_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "component",
+            "type": "nominal",
+            "label": "Package surface"
+          },
+          "y": {
+            "field": "count",
+            "type": "quantitative",
+            "label": "Count",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "count",
+              "type": "quantitative",
+              "label": "Count",
+              "format": "number"
+            }
+          ]
+        }
+      },
+      {
+        "id": "package_capability_chart",
+        "question": "Package architecture by capability mix",
+        "intent": "comparison",
+        "rationale": "A mutually exclusive archetype distribution makes the package composition legible without overplotting sixty-two package points.",
+        "title": "Package architecture by capability mix",
+        "subtitle": "62 packages · six mutually exclusive Skills / Apps / MCP archetypes · Git 6d99ee14",
+        "type": "horizontalBar",
+        "dataset": "package_archetypes",
+        "sourceId": "package_archetypes_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "architecture",
+            "type": "nominal",
+            "label": "Capability archetype"
+          },
+          "y": {
+            "field": "package_count",
+            "type": "quantitative",
+            "label": "Packages",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "package_count",
+              "type": "quantitative",
+              "label": "Packages",
+              "format": "number"
+            },
+            {
+              "field": "share",
+              "type": "quantitative",
+              "label": "Marketplace share",
+              "format": "percent"
+            },
+            {
+              "field": "openai_packages",
+              "type": "quantitative",
+              "label": "OpenAI packages",
+              "format": "number"
+            },
+            {
+              "field": "third_party_packages",
+              "type": "quantitative",
+              "label": "Third-party packages",
+              "format": "number"
+            },
+            {
+              "field": "skill_entrypoints",
+              "type": "quantitative",
+              "label": "Skill entrypoints",
+              "format": "number"
+            },
+            {
+              "field": "app_references",
+              "type": "quantitative",
+              "label": "App references",
+              "format": "number"
+            },
+            {
+              "field": "mcp_servers",
+              "type": "quantitative",
+              "label": "MCP configs",
+              "format": "number"
+            },
+            {
+              "field": "examples",
+              "type": "nominal",
+              "label": "Examples"
+            }
+          ]
+        }
+      },
+      {
+        "id": "interfaces_chart",
+        "question": "Codex plugin interfaces by layer",
+        "intent": "comparison",
+        "rationale": "Six named interface families fit a high-contrast horizontal comparison with a shared zero baseline.",
+        "title": "Codex plugin interfaces by layer",
+        "subtitle": "Six CLI, TUI, request, and notification layers; exact methods remain available in the source data preview.",
+        "type": "horizontalBar",
+        "dataset": "interfaces",
+        "sourceId": "interfaces_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "layer",
+            "type": "nominal",
+            "label": "Interface layer"
+          },
+          "y": {
+            "field": "count",
+            "type": "quantitative",
+            "label": "Methods / commands",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "count",
+              "type": "quantitative",
+              "label": "Methods / commands",
+              "format": "number"
+            },
+            {
+              "field": "examples",
+              "type": "nominal",
+              "label": "Methods / commands"
+            }
+          ]
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "api_exclusions_table",
+        "title": "Standard marketplace entries excluded from the API-key subset",
+        "subtitle": "16 name-level exclusions at Git 6d99ee14.",
+        "dataset": "api_exclusions",
+        "sourceId": "api_exclusions_sql",
+        "defaultSort": {
+          "field": "plugin",
+          "direction": "asc"
+        },
+        "density": "dense",
+        "layout": "full",
+        "columns": [
+          {
+            "field": "plugin",
+            "label": "Plugin",
+            "type": "text"
+          },
+          {
+            "field": "standardMarketplace",
+            "label": "Standard",
+            "type": "text"
+          },
+          {
+            "field": "apiKeyMarketplace",
+            "label": "API key",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "summary_sql",
+        "label": "Audit headline metrics",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "inventory_planes_sql",
+        "label": "Market-source reconciliation",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "tui_categories_sql",
+        "label": "TUI-visible plugin categories",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "third_party_categories_sql",
+        "label": "Third-party provider categories",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "top_third_party_providers_sql",
+        "label": "Top third-party providers",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "category_positioning_sql",
+        "label": "Cross-market category positioning",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "cli_marketplaces_sql",
+        "label": "CLI marketplace catalog rows",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "component_counts_chart_sql",
+        "label": "Plugin package surface comparison",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "package_index_sql",
+        "label": "Official Git package capability index",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "package_archetypes_sql",
+        "label": "Package capability archetypes",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "interfaces_sql",
+        "label": "Codex plugin interface inventory",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "api_exclusions_sql",
+        "label": "API-key marketplace exclusions",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "pty_observation",
+        "label": "Direct Codex PTY /plugins observation",
+        "path": "evidence/pty-observation.json"
+      },
+      {
+        "id": "official_docs",
+        "label": "Official OpenAI Plugins documentation",
+        "href": "https://learn.chatgpt.com/docs/plugins"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "hero_metrics",
+        "type": "metric-strip",
+        "cardIds": [
+          "universal_catalog",
+          "cli_snapshot",
+          "git_marketplace",
+          "skills_surface",
+          "apps_surface"
+        ]
+      },
+      {
+        "id": "technical_summary",
+        "type": "markdown",
+        "body": "## Skills / Plugins / Apps Package Market Data Insights\n\n`INDEX SCOPE` Universal, CLI, Git, and Apps use different denominators. Click a metric card for exact SQL and reviewed rows."
+      },
+      {
+        "id": "inventory_planes",
+        "type": "chart",
+        "chartId": "inventory_planes_chart",
+        "layout": "full"
+      },
+      {
+        "id": "audit_highlights",
+        "type": "metric-strip",
+        "cardIds": [
+          "projection_delta",
+          "live_concentration",
+          "git_developer_mix",
+          "api_coverage"
+        ]
+      },
+      {
+        "id": "cli_marketplaces_intro",
+        "type": "markdown",
+        "sourceId": "cli_marketplaces_sql",
+        "body": "## ◇ CLI catalog sources\n\n`CATALOG MIX` **180 / 195** rows come from managed curated; bundled and primary runtime are supporting sources."
+      },
+      {
+        "id": "cli_marketplaces",
+        "type": "chart",
+        "chartId": "cli_marketplaces_chart"
+      },
+      {
+        "id": "universal_categories_intro",
+        "type": "markdown",
+        "sourceId": "tui_categories_sql",
+        "body": "## ◉ Live mix\n\n`CATALOG MIX` **39.7%** sits in Productivity + Business & Operations; 12 categories hold the remainder."
+      },
+      {
+        "id": "universal_categories",
+        "type": "chart",
+        "chartId": "tui_categories_chart"
+      },
+      {
+        "id": "provider_summary",
+        "type": "markdown",
+        "body": "## ◎ Provider ecosystem\n\n`METADATA COVERAGE` **3,259 third-party plugins · 2,857 providers · 96.5% linked websites.**"
+      },
+      {
+        "id": "provider_metrics",
+        "type": "metric-strip",
+        "cardIds": [
+          "third_party_catalog",
+          "provider_breadth",
+          "provider_url_coverage",
+          "git_provider_mix",
+          "app_provider_mix"
+        ]
+      },
+      {
+        "id": "third_party_categories_intro",
+        "type": "markdown",
+        "sourceId": "third_party_categories_sql",
+        "body": "## ◎ Third-party category breadth\n\n`CATEGORY × PROVIDER` Productivity leads package count; Business & Operations leads distinct-provider breadth."
+      },
+      {
+        "id": "third_party_categories",
+        "type": "chart",
+        "chartId": "third_party_categories_chart"
+      },
+      {
+        "id": "top_providers_intro",
+        "type": "markdown",
+        "sourceId": "top_third_party_providers_sql",
+        "body": "## ↗ Provider concentration\n\n`TOP 8` The largest named providers still represent a small share of 2,857 third-party providers, indicating a highly fragmented catalog."
+      },
+      {
+        "id": "top_providers",
+        "type": "chart",
+        "chartId": "top_third_party_providers_chart"
+      },
+      {
+        "id": "provider_links",
+        "type": "markdown",
+        "sourceId": "top_third_party_providers_sql",
+        "body": "### ↗ Provider metadata links\n\n`PROVIDERS` [Widget · 35](https://www.widget.olutely.com/) · [Spheric Admin Ltd · 29](https://www.widget.olutely.com/) · [Rohas Nagpal · 25](https://github.com/rohasnagpal/legal-ai-skills) · [Yaps AI · 12](https://www.yaps.ai/codex?utm_source=codex&utm_medium=plugin&utm_campaign=official_plugins) · [Layer 3 Labs · 10](https://www.layer3labs.io/) · [Windsor.ai · 5](https://windsor.ai/)"
+      },
+      {
+        "id": "repo_categories_intro",
+        "type": "markdown",
+        "sourceId": "category_positioning_sql",
+        "body": "## ◆ Cross-market emphasis\n\n`CATEGORY POSITIONING` Developer Tools over-index in Git; business, finance, and travel over-index in the universal directory."
+      },
+      {
+        "id": "repo_categories",
+        "type": "chart",
+        "chartId": "category_positioning_chart"
+      },
+      {
+        "id": "components_intro",
+        "type": "markdown",
+        "sourceId": "component_counts_chart_sql",
+        "body": "## ▦ Capability surface\n\n`PACKAGE MIX` **501 skills · 74 App refs · 31 MCP · 47 commands · 23 agents.** Counts overlap."
+      },
+      {
+        "id": "component_counts",
+        "type": "chart",
+        "chartId": "component_counts_chart"
+      },
+      {
+        "id": "package_architecture_intro",
+        "type": "markdown",
+        "sourceId": "package_archetypes_sql",
+        "body": "## ▦ Package capability archetypes\n\n`ARCHITECTURE MIX` **24 Skills only · 16 Skills + Apps + MCP · 11 Apps + MCP.** Together these account for 82.3% of packages."
+      },
+      {
+        "id": "package_architecture",
+        "type": "chart",
+        "chartId": "package_capability_chart"
+      },
+      {
+        "id": "package_links",
+        "type": "markdown",
+        "sourceId": "package_index_sql",
+        "body": "### ↗ Package metadata links\n\n`SKILLS` [Twilio Developer Kit · 55](https://www.twilio.com/) · [Vercel · 54](https://vercel.com/) · [Life Science Research · 50](https://openai.com/)\n\n`APPS` [Data Analytics · 23](https://openai.com/) · [Public Equity Investing · 15](https://openai.com/) · [Codex Security · 4](https://openai.com/)\n\n`MCP` [Vercel · 1](https://vercel.com/) · [Data Analytics · 1](https://openai.com/) · [Zoom · 1](https://zoom.us/)"
+      },
+      {
+        "id": "interfaces_intro",
+        "type": "markdown",
+        "sourceId": "interfaces_sql",
+        "body": "## ⌘ Interface map\n\n`SURFACES` **7 CLI · 1 TUI · 18 RPC · 1 notification.**"
+      },
+      {
+        "id": "interfaces",
+        "type": "chart",
+        "chartId": "interfaces_chart",
+        "layout": "full"
+      },
+      {
+        "id": "pty_projection_intro",
+        "type": "markdown",
+        "sourceId": "inventory_planes_sql",
+        "body": "## ↔ PTY market-source filter\n\n`DIRECTORY FILTER` **3,322 raw App Server rows → −10 CLI-only bundled rows → 3,312 user-visible rows.**"
+      },
+      {
+        "id": "apps_and_api",
+        "type": "markdown",
+        "body": "## ◌ Apps / API scope\n\n`APP PACKAGES` **74 references · 54 unique ids · 22 third-party references.** `API SUBSET` **46 / 62 (74.2%).**"
+      },
+      {
+        "id": "api_exclusions",
+        "type": "table",
+        "tableId": "api_exclusions_table",
+        "layout": "full"
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-08-28T04:36:36.273Z",
+    "status": "ready",
+    "datasets": {
+      "summary": [
+        {
+          "universal_plugins": 3312,
+          "raw_plugins": 3322,
+          "hidden_bundled": 10,
+          "cli_plugins": 195,
+          "repo_plugins": 62,
+          "api_plugins": 46,
+          "api_coverage": 0.7419354838709677,
+          "productivity_plugins": 691,
+          "business_ops_plugins": 623,
+          "top_two_category_share": 0.3967391304347826,
+          "git_developer_plugins": 24,
+          "git_developer_share": 0.3870967741935484,
+          "skill_entrypoints": 501,
+          "plugins_with_skills": 46,
+          "app_references_total": 74,
+          "unique_app_ids": 54,
+          "third_party_plugins": 3259,
+          "third_party_share": 0.9839975845410628,
+          "distinct_third_party_providers": 2857,
+          "provider_website_linked": 3195,
+          "provider_website_coverage": 0.9646739130434783,
+          "git_third_party_packages": 36,
+          "git_third_party_share": 0.5806451612903226,
+          "third_party_app_references": 22,
+          "third_party_app_share": 0.2972972972972973,
+          "git_url_coverage": 1
+        }
+      ],
+      "inventory_planes": [
+        {
+          "plane": "App Server raw default",
+          "source": "Remote + primary runtime + CLI-only bundled",
+          "total": 3322,
+          "freshness": "Live, before TUI filtering"
+        },
+        {
+          "plane": "PTY universal directory",
+          "source": "OpenAI curated remote + primary runtime",
+          "total": 3312,
+          "freshness": "Live App Server catalog view, PTY verified"
+        },
+        {
+          "plane": "CLI marketplace catalogs",
+          "source": "openai-primary-runtime, openai-bundled, openai-curated",
+          "total": 195,
+          "freshness": "Catalog snapshot; curated source 11c74d6b"
+        },
+        {
+          "plane": "Official Git marketplace",
+          "source": "openai/plugins marketplace.json",
+          "total": 62,
+          "freshness": "Git 6d99ee14"
+        },
+        {
+          "plane": "API-key Git marketplace",
+          "source": "openai/plugins api_marketplace.json",
+          "total": 46,
+          "freshness": "Git 6d99ee14"
+        }
+      ],
+      "tui_categories": [
+        {
+          "category": "Productivity",
+          "count": 691,
+          "rank": 1,
+          "share": 0.2086352657004831
+        },
+        {
+          "category": "Business & Operations",
+          "count": 623,
+          "rank": 2,
+          "share": 0.18810386473429952
+        },
+        {
+          "category": "Other",
+          "count": 439,
+          "rank": 3,
+          "share": 0.13254830917874397
+        },
+        {
+          "category": "Finance",
+          "count": 337,
+          "rank": 4,
+          "share": 0.10175120772946859
+        },
+        {
+          "category": "Travel",
+          "count": 268,
+          "rank": 5,
+          "share": 0.08091787439613526
+        },
+        {
+          "category": "Developer Tools",
+          "count": 267,
+          "rank": 6,
+          "share": 0.0806159420289855
+        },
+        {
+          "category": "Education & Research",
+          "count": 179,
+          "rank": 7,
+          "share": 0.05404589371980676
+        },
+        {
+          "category": "Data & Analytics",
+          "count": 137,
+          "rank": 8,
+          "share": 0.04136473429951691
+        },
+        {
+          "category": "Creativity",
+          "count": 126,
+          "rank": 9,
+          "share": 0.03804347826086957
+        },
+        {
+          "category": "Entertainment",
+          "count": 111,
+          "rank": 10,
+          "share": 0.03351449275362319
+        },
+        {
+          "category": "Healthcare",
+          "count": 75,
+          "rank": 11,
+          "share": 0.022644927536231884
+        },
+        {
+          "category": "Communication",
+          "count": 26,
+          "rank": 12,
+          "share": 0.00785024154589372
+        },
+        {
+          "category": "Security",
+          "count": 26,
+          "rank": 13,
+          "share": 0.00785024154589372
+        },
+        {
+          "category": "Scientific Research",
+          "count": 7,
+          "rank": 14,
+          "share": 0.002113526570048309
+        }
+      ],
+      "third_party_categories": [
+        {
+          "category": "Productivity",
+          "plugin_count": 673,
+          "provider_count": 571,
+          "share": 0.2065050629027309
+        },
+        {
+          "category": "Business & Operations",
+          "plugin_count": 618,
+          "provider_count": 585,
+          "share": 0.18962872046640072
+        },
+        {
+          "category": "Other",
+          "plugin_count": 439,
+          "provider_count": 399,
+          "share": 0.13470389690088985
+        },
+        {
+          "category": "Finance",
+          "plugin_count": 334,
+          "provider_count": 314,
+          "share": 0.1024854249769868
+        },
+        {
+          "category": "Travel",
+          "plugin_count": 268,
+          "provider_count": 252,
+          "share": 0.08223381405339061
+        },
+        {
+          "category": "Developer Tools",
+          "plugin_count": 253,
+          "provider_count": 231,
+          "share": 0.07763117520711875
+        },
+        {
+          "category": "Education & Research",
+          "plugin_count": 176,
+          "provider_count": 166,
+          "share": 0.05400429579625652
+        },
+        {
+          "category": "Data & Analytics",
+          "plugin_count": 133,
+          "provider_count": 132,
+          "share": 0.04081006443694385
+        },
+        {
+          "category": "Creativity",
+          "plugin_count": 124,
+          "provider_count": 110,
+          "share": 0.03804848112918073
+        },
+        {
+          "category": "Entertainment",
+          "plugin_count": 111,
+          "provider_count": 89,
+          "share": 0.03405952746241178
+        },
+        {
+          "category": "Healthcare",
+          "plugin_count": 75,
+          "provider_count": 69,
+          "share": 0.023013194231359314
+        },
+        {
+          "category": "Security",
+          "plugin_count": 25,
+          "provider_count": 24,
+          "share": 0.007671064743786438
+        },
+        {
+          "category": "Communication",
+          "plugin_count": 23,
+          "provider_count": 23,
+          "share": 0.007057379564283523
+        },
+        {
+          "category": "Scientific Research",
+          "plugin_count": 7,
+          "provider_count": 7,
+          "share": 0.0021478981282602025
+        }
+      ],
+      "top_third_party_providers": [
+        {
+          "provider": "Widget",
+          "plugin_count": 35,
+          "category_count": 10,
+          "url": "https://www.widget.olutely.com/",
+          "sample_plugins": "All your Horoscopes, Football- Games+results+scores, A-Z Holy Bible"
+        },
+        {
+          "provider": "Spheric Admin Ltd",
+          "plugin_count": 29,
+          "category_count": 7,
+          "url": "https://www.widget.olutely.com/",
+          "sample_plugins": "Smart Chess:Train+Learn to win, Appy Coupons, AnyWhereMap - Navigate+Locate"
+        },
+        {
+          "provider": "Rohas Nagpal",
+          "plugin_count": 25,
+          "category_count": 1,
+          "url": "https://github.com/rohasnagpal/legal-ai-skills",
+          "sample_plugins": "Rohas Legal AI: Contracts, Rohas Legal AI: Litigation, Rohas Legal AI: Advisory"
+        },
+        {
+          "provider": "App developer",
+          "plugin_count": 19,
+          "category_count": 7,
+          "url": null,
+          "sample_plugins": "OpenAI Certified, Apple Music, Adobe Acrobat"
+        },
+        {
+          "provider": "BEIKE YAN",
+          "plugin_count": 17,
+          "category_count": 2,
+          "url": null,
+          "sample_plugins": "API Documentation Checker, AI Delivery Evidence Checker, RFP Response Checker"
+        },
+        {
+          "provider": "SonicJobs Inc.",
+          "plugin_count": 13,
+          "category_count": 2,
+          "url": null,
+          "sample_plugins": "SonicJobs, Disney Careers, Dell Tech Careers"
+        },
+        {
+          "provider": "Yaps AI",
+          "plugin_count": 12,
+          "category_count": 2,
+          "url": "https://www.yaps.ai/codex?utm_source=codex&utm_medium=plugin&utm_campaign=official_plugins",
+          "sample_plugins": "Yaps Memory, Yaps Dictation, Yaps Transcription"
+        },
+        {
+          "provider": "Pyxl",
+          "plugin_count": 11,
+          "category_count": 6,
+          "url": null,
+          "sample_plugins": "Astro Scope: Astrology, RewriteLy Humanizer, IHate.ai Humanaizer"
+        }
+      ],
+      "repo_categories": [
+        {
+          "category": "Developer Tools",
+          "count": 24,
+          "rank": 1,
+          "share": 0.3870967741935484
+        },
+        {
+          "category": "Productivity",
+          "count": 12,
+          "rank": 2,
+          "share": 0.1935483870967742
+        },
+        {
+          "category": "Creativity",
+          "count": 9,
+          "rank": 3,
+          "share": 0.14516129032258066
+        },
+        {
+          "category": "Communication",
+          "count": 5,
+          "rank": 4,
+          "share": 0.08064516129032258
+        },
+        {
+          "category": "Education & Research",
+          "count": 4,
+          "rank": 5,
+          "share": 0.06451612903225806
+        },
+        {
+          "category": "Data & Analytics",
+          "count": 3,
+          "rank": 6,
+          "share": 0.04838709677419355
+        },
+        {
+          "category": "Finance",
+          "count": 2,
+          "rank": 7,
+          "share": 0.03225806451612903
+        },
+        {
+          "category": "Business & Operations",
+          "count": 1,
+          "rank": 8,
+          "share": 0.016129032258064516
+        },
+        {
+          "category": "Scientific Research",
+          "count": 1,
+          "rank": 9,
+          "share": 0.016129032258064516
+        },
+        {
+          "category": "Security",
+          "count": 1,
+          "rank": 10,
+          "share": 0.016129032258064516
+        }
+      ],
+      "category_positioning": [
+        {
+          "category": "Developer Tools",
+          "universal_count": 267,
+          "universal_share": 0.0806159420289855,
+          "git_count": 24,
+          "git_share": 0.3870967741935484,
+          "share_delta": 0.3064808321645629,
+          "relative_emphasis": "Git over-index"
+        },
+        {
+          "category": "Business & Operations",
+          "universal_count": 623,
+          "universal_share": 0.18810386473429952,
+          "git_count": 1,
+          "git_share": 0.016129032258064516,
+          "share_delta": -0.17197483247623502,
+          "relative_emphasis": "Universal over-index"
+        },
+        {
+          "category": "Other",
+          "universal_count": 439,
+          "universal_share": 0.13254830917874397,
+          "git_count": 0,
+          "git_share": 0,
+          "share_delta": -0.13254830917874397,
+          "relative_emphasis": "Universal over-index"
+        },
+        {
+          "category": "Creativity",
+          "universal_count": 126,
+          "universal_share": 0.03804347826086957,
+          "git_count": 9,
+          "git_share": 0.14516129032258066,
+          "share_delta": 0.10711781206171109,
+          "relative_emphasis": "Git over-index"
+        },
+        {
+          "category": "Travel",
+          "universal_count": 268,
+          "universal_share": 0.08091787439613526,
+          "git_count": 0,
+          "git_share": 0,
+          "share_delta": -0.08091787439613526,
+          "relative_emphasis": "Universal over-index"
+        },
+        {
+          "category": "Communication",
+          "universal_count": 26,
+          "universal_share": 0.00785024154589372,
+          "git_count": 5,
+          "git_share": 0.08064516129032258,
+          "share_delta": 0.07279491974442887,
+          "relative_emphasis": "Git over-index"
+        },
+        {
+          "category": "Finance",
+          "universal_count": 337,
+          "universal_share": 0.10175120772946859,
+          "git_count": 2,
+          "git_share": 0.03225806451612903,
+          "share_delta": -0.06949314321333956,
+          "relative_emphasis": "Universal over-index"
+        },
+        {
+          "category": "Entertainment",
+          "universal_count": 111,
+          "universal_share": 0.03351449275362319,
+          "git_count": 0,
+          "git_share": 0,
+          "share_delta": -0.03351449275362319,
+          "relative_emphasis": "Universal over-index"
+        },
+        {
+          "category": "Healthcare",
+          "universal_count": 75,
+          "universal_share": 0.022644927536231884,
+          "git_count": 0,
+          "git_share": 0,
+          "share_delta": -0.022644927536231884,
+          "relative_emphasis": "Universal over-index"
+        },
+        {
+          "category": "Productivity",
+          "universal_count": 691,
+          "universal_share": 0.2086352657004831,
+          "git_count": 12,
+          "git_share": 0.1935483870967742,
+          "share_delta": -0.015086878603708914,
+          "relative_emphasis": "Universal over-index"
+        },
+        {
+          "category": "Scientific Research",
+          "universal_count": 7,
+          "universal_share": 0.002113526570048309,
+          "git_count": 1,
+          "git_share": 0.016129032258064516,
+          "share_delta": 0.014015505688016208,
+          "relative_emphasis": "Git over-index"
+        },
+        {
+          "category": "Education & Research",
+          "universal_count": 179,
+          "universal_share": 0.05404589371980676,
+          "git_count": 4,
+          "git_share": 0.06451612903225806,
+          "share_delta": 0.010470235312451302,
+          "relative_emphasis": "Git over-index"
+        },
+        {
+          "category": "Security",
+          "universal_count": 26,
+          "universal_share": 0.00785024154589372,
+          "git_count": 1,
+          "git_share": 0.016129032258064516,
+          "share_delta": 0.008278790712170796,
+          "relative_emphasis": "Near parity"
+        },
+        {
+          "category": "Data & Analytics",
+          "universal_count": 137,
+          "universal_share": 0.04136473429951691,
+          "git_count": 3,
+          "git_share": 0.04838709677419355,
+          "share_delta": 0.0070223624746766355,
+          "relative_emphasis": "Near parity"
+        }
+      ],
+      "cli_marketplaces": [
+        {
+          "marketplace": "openai-curated",
+          "total": 180
+        },
+        {
+          "marketplace": "openai-bundled",
+          "total": 10
+        },
+        {
+          "marketplace": "openai-primary-runtime",
+          "total": 5
+        }
+      ],
+      "component_counts_chart": [
+        {
+          "component": "Immediate skill entrypoints",
+          "count": 501
+        },
+        {
+          "component": "App references",
+          "count": 74
+        },
+        {
+          "component": "Unique App ids",
+          "count": 54
+        },
+        {
+          "component": "Plugin-level command files",
+          "count": 47
+        },
+        {
+          "component": "MCP server configs",
+          "count": 31
+        },
+        {
+          "component": "Plugin-level agent files",
+          "count": 23
+        },
+        {
+          "component": "Hook declarations",
+          "count": 1
+        }
+      ],
+      "package_index": [
+        {
+          "name": "twilio-developer-kit",
+          "display_name": "Twilio Developer Kit",
+          "provider": "Twilio",
+          "provider_scope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://www.twilio.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 55,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "vercel",
+          "display_name": "Vercel",
+          "provider": "Vercel Labs",
+          "provider_scope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://vercel.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 54,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 11,
+          "agent_files": 6
+        },
+        {
+          "name": "life-science-research",
+          "display_name": "Life Science Research",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Education & Research",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 50,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "zoom",
+          "display_name": "Zoom",
+          "provider": "Zoom",
+          "provider_scope": "Third-party",
+          "category": "Communication",
+          "url": "https://zoom.us/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 27,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 26,
+          "agent_files": 3
+        },
+        {
+          "name": "public-equity-investing",
+          "display_name": "Public Equity Investing",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Finance",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 23,
+          "app_references": 15,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "shopify",
+          "display_name": "Shopify",
+          "provider": "Shopify",
+          "provider_scope": "Third-party",
+          "category": "Business & Operations",
+          "url": "https://shopify.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 20,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "build-web-data-visualization",
+          "display_name": "Build Web Data Visualization",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 18,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 1
+        },
+        {
+          "name": "ngs-analysis",
+          "display_name": "Life Sciences NGS Analysis",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Education & Research",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 18,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "data-analytics",
+          "display_name": "Data Analytics",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Data & Analytics",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 15,
+          "app_references": 23,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "codex-security",
+          "display_name": "Codex Security",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Security",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 14,
+          "app_references": 4,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "superpowers",
+          "display_name": "Superpowers",
+          "provider": "Jesse Vincent",
+          "provider_scope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://github.com/obra/superpowers",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 14,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "expo",
+          "display_name": "Expo",
+          "provider": "Expo",
+          "provider_scope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://expo.dev/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 13,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 1,
+          "agent_files": 1
+        },
+        {
+          "name": "figma",
+          "display_name": "Figma",
+          "provider": "Figma",
+          "provider_scope": "Third-party",
+          "category": "Creativity",
+          "url": "https://www.figma.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 12,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 4,
+          "agent_files": 5
+        },
+        {
+          "name": "nvidia",
+          "display_name": "NVIDIA",
+          "provider": "NVIDIA",
+          "provider_scope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://www.nvidia.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 12,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "remotion",
+          "display_name": "Remotion",
+          "provider": "Remotion",
+          "provider_scope": "Third-party",
+          "category": "Creativity",
+          "url": "https://remotion.dev/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 12,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "build-macos-apps",
+          "display_name": "Build macOS Apps",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 11,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 3,
+          "agent_files": 1
+        },
+        {
+          "name": "product-design",
+          "display_name": "Product Design",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Creativity",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 10,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 1
+        },
+        {
+          "name": "build-ios-apps",
+          "display_name": "Build iOS Apps",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 9,
+          "app_references": 0,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 1
+        },
+        {
+          "name": "cloudflare",
+          "display_name": "Cloudflare",
+          "provider": "Cloudflare",
+          "provider_scope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://workers.cloudflare.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 9,
+          "app_references": 0,
+          "mcp_servers": 1,
+          "command_files": 2,
+          "agent_files": 0
+        },
+        {
+          "name": "game-studio",
+          "display_name": "Game Studio",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 9,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "canva",
+          "display_name": "Canva",
+          "provider": "Canva Pty Ltd.",
+          "provider_scope": "Third-party",
+          "category": "Creativity",
+          "url": "https://www.canva.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 8,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "boltz-api-cli",
+          "display_name": "Boltz",
+          "provider": "Boltz",
+          "provider_scope": "Third-party",
+          "category": "Scientific Research",
+          "url": "https://boltz.bio/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 8,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "stripe",
+          "display_name": "Stripe",
+          "provider": "Stripe",
+          "provider_scope": "Third-party",
+          "category": "Finance",
+          "url": "https://stripe.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 7,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "adobe",
+          "display_name": "Adobe",
+          "provider": "Adobe Inc",
+          "provider_scope": "Third-party",
+          "category": "Creativity",
+          "url": "https://www.adobe.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 6,
+          "app_references": 1,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "dropbox",
+          "display_name": "Dropbox",
+          "provider": "Dropbox",
+          "provider_scope": "Third-party",
+          "category": "Productivity",
+          "url": "https://www.dropbox.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 6,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "build-web-apps",
+          "display_name": "Build Web Apps",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 6,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 1
+        },
+        {
+          "name": "google-drive",
+          "display_name": "Google Drive",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Productivity",
+          "url": "https://workspace.google.com/products/drive/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 5,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "openai-developers",
+          "display_name": "OpenAI Developers",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://platform.openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 5,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "hyperframes",
+          "display_name": "HyperFrames by HeyGen",
+          "provider": "HeyGen",
+          "provider_scope": "Third-party",
+          "category": "Creativity",
+          "url": "https://hyperframes.heygen.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 5,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "plugin-eval",
+          "display_name": "Plugin Eval",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 5,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "notion",
+          "display_name": "Notion",
+          "provider": "Notion",
+          "provider_scope": "Third-party",
+          "category": "Productivity",
+          "url": "https://www.notion.so/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 4,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 1
+        },
+        {
+          "name": "circleci",
+          "display_name": "CircleCI",
+          "provider": "CircleCI",
+          "provider_scope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://circleci.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 4,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "mixpanel-headless",
+          "display_name": "Mixpanel Headless",
+          "provider": "Mixpanel",
+          "provider_scope": "Third-party",
+          "category": "Data & Analytics",
+          "url": "https://mixpanel.com/home",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 4,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "temporal",
+          "display_name": "Temporal",
+          "provider": "Temporal",
+          "provider_scope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://temporal.io/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 4,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "airtable",
+          "display_name": "Airtable",
+          "provider": "Airtable",
+          "provider_scope": "Third-party",
+          "category": "Productivity",
+          "url": "https://airtable.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 3,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "higgsfield",
+          "display_name": "Higgsfield",
+          "provider": "Higgsfield AI, Inc.",
+          "provider_scope": "Third-party",
+          "category": "Creativity",
+          "url": "https://higgsfield.ai/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 3,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "supabase",
+          "display_name": "Supabase",
+          "provider": "Supabase",
+          "provider_scope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://supabase.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 2,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "creative-production",
+          "display_name": "Creative Production",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Creativity",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 2,
+          "app_references": 0,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "test-android-apps",
+          "display_name": "Test Android Apps",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 2,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 1
+        },
+        {
+          "name": "posthog",
+          "display_name": "PostHog",
+          "provider": "PostHog Inc.",
+          "provider_scope": "Third-party",
+          "category": "Data & Analytics",
+          "url": "https://posthog.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 1,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "chatcut",
+          "display_name": "ChatCut",
+          "provider": "ChatCut",
+          "provider_scope": "Third-party",
+          "category": "Creativity",
+          "url": "https://chatcut.io/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 1,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "coderabbit",
+          "display_name": "CodeRabbit",
+          "provider": "CodeRabbit",
+          "provider_scope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://coderabbit.ai/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 1,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "magicpath",
+          "display_name": "MagicPath",
+          "provider": "MagicPathAI",
+          "provider_scope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://www.magicpath.ai/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 1,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "openai-ads-conversions",
+          "display_name": "OpenAI Ads Conversions",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://developers.openai.com/ads/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 1,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "sentry",
+          "display_name": "Sentry",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://sentry.io/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 1,
+          "app_references": 0,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "zotero",
+          "display_name": "Zotero",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Education & Research",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 1,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "github",
+          "display_name": "GitHub",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://github.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 2,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "atlassian-rovo",
+          "display_name": "Atlassian Rovo",
+          "provider": "Atlassian",
+          "provider_scope": "Third-party",
+          "category": "Productivity",
+          "url": "https://www.atlassian.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 1
+        },
+        {
+          "name": "clickup",
+          "display_name": "ClickUp",
+          "provider": "ClickUp",
+          "provider_scope": "Third-party",
+          "category": "Productivity",
+          "url": "https://clickup.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "consensus",
+          "display_name": "Consensus",
+          "provider": "Consensus",
+          "provider_scope": "Third-party",
+          "category": "Education & Research",
+          "url": "https://consensus.app/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "datadog",
+          "display_name": "Datadog (Preview)",
+          "provider": "Datadog",
+          "provider_scope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://www.datadoghq.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "gmail",
+          "display_name": "Gmail",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Communication",
+          "url": "https://workspace.google.com/products/gmail/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "google-calendar",
+          "display_name": "Google Calendar",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Productivity",
+          "url": "https://workspace.google.com/products/calendar/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "granola",
+          "display_name": "Granola",
+          "provider": "Granola",
+          "provider_scope": "Third-party",
+          "category": "Productivity",
+          "url": "https://www.granola.ai/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "linear",
+          "display_name": "Linear",
+          "provider": "Linear Orbit, Inc",
+          "provider_scope": "Third-party",
+          "category": "Productivity",
+          "url": "https://linear.app/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "lovable",
+          "display_name": "Lovable",
+          "provider": "Lovable Labs",
+          "provider_scope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://lovable.dev/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "monday-com",
+          "display_name": "monday.com",
+          "provider": "monday.com",
+          "provider_scope": "Third-party",
+          "category": "Productivity",
+          "url": "https://monday.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "outlook-calendar",
+          "display_name": "Outlook Calendar",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Productivity",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/outlook/calendar-app",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "outlook-email",
+          "display_name": "Outlook Email",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Communication",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "sharepoint",
+          "display_name": "SharePoint",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Productivity",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "slack",
+          "display_name": "Slack",
+          "provider": "Slack",
+          "provider_scope": "Third-party",
+          "category": "Communication",
+          "url": "https://slack.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "teams",
+          "display_name": "Teams",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "Communication",
+          "url": "https://www.microsoft.com/en-us/microsoft-teams/group-chat-software",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        }
+      ],
+      "package_archetypes": [
+        {
+          "architecture": "Skills only",
+          "package_count": 24,
+          "share": 0.3870967741935484,
+          "openai_packages": 11,
+          "third_party_packages": 13,
+          "skill_entrypoints": 265,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "examples": "Boltz, Build macOS Apps, Build Web Apps, Build Web Data Visualization"
+        },
+        {
+          "architecture": "Skills + Apps + MCP",
+          "package_count": 16,
+          "share": 0.25806451612903225,
+          "openai_packages": 4,
+          "third_party_packages": 12,
+          "skill_entrypoints": 186,
+          "app_references": 41,
+          "mcp_servers": 16,
+          "examples": "Airtable, Canva, Codex Security, Data Analytics"
+        },
+        {
+          "architecture": "Apps + MCP",
+          "package_count": 11,
+          "share": 0.1774193548387097,
+          "openai_packages": 3,
+          "third_party_packages": 8,
+          "skill_entrypoints": 0,
+          "app_references": 12,
+          "mcp_servers": 11,
+          "examples": "Atlassian Rovo, ClickUp, Consensus, Datadog (Preview)"
+        },
+        {
+          "architecture": "Apps only",
+          "package_count": 5,
+          "share": 0.08064516129032258,
+          "openai_packages": 4,
+          "third_party_packages": 1,
+          "skill_entrypoints": 0,
+          "app_references": 5,
+          "mcp_servers": 0,
+          "examples": "Lovable, Outlook Calendar, Outlook Email, SharePoint"
+        },
+        {
+          "architecture": "Skills + MCP",
+          "package_count": 4,
+          "share": 0.06451612903225806,
+          "openai_packages": 3,
+          "third_party_packages": 1,
+          "skill_entrypoints": 21,
+          "app_references": 0,
+          "mcp_servers": 4,
+          "examples": "Build iOS Apps, Cloudflare, Creative Production, Sentry"
+        },
+        {
+          "architecture": "Skills + Apps",
+          "package_count": 2,
+          "share": 0.03225806451612903,
+          "openai_packages": 1,
+          "third_party_packages": 1,
+          "skill_entrypoints": 29,
+          "app_references": 16,
+          "mcp_servers": 0,
+          "examples": "Adobe, Public Equity Investing"
+        }
+      ],
+      "interfaces": [
+        {
+          "layer": "Plugin JSON-RPC requests",
+          "count": 12,
+          "examples": "plugin/install, plugin/installed, plugin/list, plugin/read, plugin/search, plugin/share/checkout, plugin/share/delete, plugin/share/list, plugin/share/save, plugin/share/updateTargets, plugin/skill/read, plugin/uninstall"
+        },
+        {
+          "layer": "Codex CLI leaf commands",
+          "count": 7,
+          "examples": "plugin add/list/remove; marketplace add/list/upgrade/remove"
+        },
+        {
+          "layer": "App JSON-RPC requests",
+          "count": 3,
+          "examples": "app/installed, app/list, app/read"
+        },
+        {
+          "layer": "Marketplace JSON-RPC requests",
+          "count": 3,
+          "examples": "marketplace/add, marketplace/remove, marketplace/upgrade"
+        },
+        {
+          "layer": "App notifications",
+          "count": 1,
+          "examples": "app/list/updated"
+        },
+        {
+          "layer": "TUI slash commands",
+          "count": 1,
+          "examples": "/plugins"
+        }
+      ],
+      "api_exclusions": [
+        {
+          "plugin": "adobe",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "airtable",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "creative-production",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "data-analytics",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "github",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "gmail",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "google-calendar",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "google-drive",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "lovable",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "outlook-calendar",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "outlook-email",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "public-equity-investing",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "sharepoint",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "shopify",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "teams",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        },
+        {
+          "plugin": "zoom",
+          "standardMarketplace": "Included",
+          "apiKeyMarketplace": "Excluded"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "summary_sql",
+      "label": "Audit headline metrics",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 1 row because the dashboard headline snapshot is a singleton.\nSELECT\n  universal_plugins,\n  raw_plugins,\n  hidden_bundled,\n  cli_plugins,\n  repo_plugins,\n  api_plugins,\n  api_coverage,\n  productivity_plugins,\n  business_ops_plugins,\n  top_two_category_share,\n  git_developer_plugins,\n  git_developer_share,\n  skill_entrypoints,\n  plugins_with_skills,\n  app_references_total,\n  unique_app_ids,\n  third_party_plugins,\n  third_party_share,\n  distinct_third_party_providers,\n  provider_website_linked,\n  provider_website_coverage,\n  git_third_party_packages,\n  git_third_party_share,\n  third_party_app_references,\n  third_party_app_share,\n  git_url_coverage\nFROM summary;",
+        "description": "Selects the reviewed summary rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "summary"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": [
+          "Each headline retains the denominator of its named market source or catalog view."
+        ]
+      }
+    },
+    {
+      "id": "inventory_planes_sql",
+      "label": "Market-source reconciliation",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 5 rows because the audit defines five distinct market sources and catalog views.\nSELECT plane, source, total, freshness\nFROM inventory_planes\nORDER BY total DESC, plane ASC;",
+        "description": "Selects the reviewed inventory_planes rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "inventory_planes"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": []
+      }
+    },
+    {
+      "id": "tui_categories_sql",
+      "label": "TUI-visible plugin categories",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: one row per TUI-visible universal-directory category.\nSELECT category, count, rank, share\nFROM tui_categories\nORDER BY count DESC, category ASC;",
+        "description": "Selects the reviewed tui_categories rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "tui_categories"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": []
+      }
+    },
+    {
+      "id": "third_party_categories_sql",
+      "label": "Third-party provider categories",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 14 rows because third-party packages span all 14 universal-directory categories.\nSELECT category, plugin_count, provider_count, share\nFROM third_party_categories\nORDER BY plugin_count DESC, category ASC;",
+        "description": "Selects the reviewed third_party_categories rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "third_party_categories"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": [
+          "Third-party requires a non-empty developerName that is not normalized to OpenAI.",
+          "Provider count is distinct developerName within each category."
+        ]
+      }
+    },
+    {
+      "id": "top_third_party_providers_sql",
+      "label": "Top third-party providers",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 8 rows because the dashboard keeps a bounded top-provider comparison.\nSELECT provider, plugin_count, category_count, url, sample_plugins\nFROM top_third_party_providers\nORDER BY plugin_count DESC, category_count DESC, provider ASC;",
+        "description": "Selects the reviewed top_third_party_providers rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "top_third_party_providers"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": []
+      }
+    },
+    {
+      "id": "category_positioning_sql",
+      "label": "Cross-market category positioning",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 14 rows because the union contains 14 category names across the two market views.\nWITH categories AS (\n  SELECT category FROM tui_categories\n  UNION\n  SELECT category FROM repo_categories\n),\ncombined AS (\n  SELECT\n    categories.category,\n    COALESCE(tui_categories.count, 0) AS universal_count,\n    COALESCE(tui_categories.share, 0.0) AS universal_share,\n    COALESCE(repo_categories.count, 0) AS git_count,\n    COALESCE(repo_categories.share, 0.0) AS git_share\n  FROM categories\n  LEFT JOIN tui_categories USING (category)\n  LEFT JOIN repo_categories USING (category)\n)\nSELECT\n  category,\n  universal_count,\n  universal_share,\n  git_count,\n  git_share,\n  git_share - universal_share AS share_delta,\n  CASE\n    WHEN git_share - universal_share > 0.01 THEN 'Git over-index'\n    WHEN git_share - universal_share < -0.01 THEN 'Universal over-index'\n    ELSE 'Near parity'\n  END AS relative_emphasis\nFROM combined\nORDER BY ABS(git_share - universal_share) DESC, category ASC;",
+        "description": "Selects the reviewed category_positioning rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "category_positioning"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": [
+          "Universal share uses 3,312 TUI-visible plugin rows as its denominator.",
+          "Git share uses 62 standard marketplace packages as its denominator.",
+          "Relative emphasis compares the two fractional shares at the same category grain."
+        ]
+      }
+    },
+    {
+      "id": "cli_marketplaces_sql",
+      "label": "CLI marketplace catalog rows",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 3 rows because the CLI reports three configured marketplace catalogs.\nSELECT marketplace, total\nFROM cli_marketplaces\nORDER BY total DESC, marketplace ASC;",
+        "description": "Selects the reviewed cli_marketplaces rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "cli_marketplaces"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": []
+      }
+    },
+    {
+      "id": "component_counts_chart_sql",
+      "label": "Plugin package surface comparison",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 7 rows because the chart compares seven overlapping plugin package surfaces.\nSELECT component, count\nFROM component_counts_chart\nORDER BY count DESC, component ASC;",
+        "description": "Selects the reviewed component_counts_chart rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "component_counts_chart"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": []
+      }
+    },
+    {
+      "id": "package_index_sql",
+      "label": "Official Git package capability index",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 62 rows because the official Git marketplace contains 62 package manifests.\nSELECT\n  name,\n  display_name,\n  provider,\n  provider_scope,\n  category,\n  url,\n  url_source,\n  skill_entrypoints,\n  app_references,\n  mcp_servers,\n  command_files,\n  agent_files\nFROM package_index\nORDER BY skill_entrypoints DESC, app_references DESC, name ASC;",
+        "description": "Selects the reviewed package_index rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "package_index"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": [
+          "Package URLs use interface.websiteURL, then homepage, repository, and author.url.",
+          "Provider scope uses manifest developer/author metadata only."
+        ]
+      }
+    },
+    {
+      "id": "package_archetypes_sql",
+      "label": "Package capability archetypes",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 6 rows because the 62 package manifests occupy six mutually exclusive Skills/Apps/MCP combinations.\nSELECT\n  architecture,\n  package_count,\n  share,\n  openai_packages,\n  third_party_packages,\n  skill_entrypoints,\n  app_references,\n  mcp_servers,\n  examples\nFROM package_archetypes\nORDER BY package_count DESC, architecture ASC;",
+        "description": "Selects the reviewed package_archetypes rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "package_archetypes"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": [
+          "Each package belongs to one mutually exclusive archetype based on manifest-declared Skills, Apps, and MCP presence.",
+          "Provider and component totals are aggregated within the same 62-package denominator."
+        ]
+      }
+    },
+    {
+      "id": "interfaces_sql",
+      "label": "Codex plugin interface inventory",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 6 rows because the audit separates six CLI, TUI, request, and notification layers.\nSELECT layer, count, examples\nFROM interfaces\nORDER BY count DESC, layer ASC;",
+        "description": "Selects the reviewed interfaces rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "interfaces"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": []
+      }
+    },
+    {
+      "id": "api_exclusions_sql",
+      "label": "API-key marketplace exclusions",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: one row per standard-marketplace name excluded from the API-key subset.\nSELECT plugin, standardMarketplace, apiKeyMarketplace\nFROM api_exclusions\nORDER BY plugin ASC;",
+        "description": "Selects the reviewed api_exclusions rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "api_exclusions"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": []
+      }
+    },
+    {
+      "id": "pty_observation",
+      "label": "Direct Codex PTY /plugins observation",
+      "path": "evidence/pty-observation.json"
+    },
+    {
+      "id": "official_docs",
+      "label": "Official OpenAI Plugins documentation",
+      "href": "https://learn.chatgpt.com/docs/plugins"
+    }
+  ]
+}

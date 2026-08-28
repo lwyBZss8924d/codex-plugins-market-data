@@ -1,0 +1,3777 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-28T04:36:36.273Z",
+  "collectorVersion": "1.0.0",
+  "inputs": {
+    "codexRepository": "~/dev-space/openai/codex",
+    "pluginsRepository": "~/dev-space/openai/plugins",
+    "managedCuratedCache": "~/.codex/.tmp/plugins"
+  },
+  "officialDocs": {
+    "pluginArchitecture": "https://developers.openai.com/plugins/concepts/plugins",
+    "plugins": "https://learn.chatgpt.com/docs/plugins"
+  },
+  "cli": {
+    "version": "codex-cli 0.150.1",
+    "configuredMarketplaces": [
+      {
+        "name": "openai-primary-runtime",
+        "sourceType": "local"
+      },
+      {
+        "name": "openai-bundled",
+        "sourceType": "local"
+      },
+      {
+        "name": "openai-curated",
+        "sourceType": "managed"
+      }
+    ],
+    "localSnapshot": {
+      "total": 195,
+      "byMarketplace": [
+        {
+          "name": "openai-curated",
+          "total": 180
+        },
+        {
+          "name": "openai-bundled",
+          "total": 10
+        },
+        {
+          "name": "openai-primary-runtime",
+          "total": 5
+        }
+      ],
+      "authentication": [
+        {
+          "name": "ON_INSTALL",
+          "count": 187
+        },
+        {
+          "name": "ON_USE",
+          "count": 8
+        }
+      ],
+      "installPolicy": [
+        {
+          "name": "AVAILABLE",
+          "count": 195
+        }
+      ]
+    },
+    "commands": {
+      "plugin": [
+        "add",
+        "list",
+        "marketplace",
+        "remove"
+      ],
+      "marketplace": [
+        "add",
+        "list",
+        "upgrade",
+        "remove"
+      ],
+      "leafCount": 7
+    }
+  },
+  "appServer": {
+    "raw": {
+      "marketplaces": [
+        {
+          "name": "openai-primary-runtime",
+          "displayName": null,
+          "local": true,
+          "total": 5,
+          "categories": [
+            {
+              "name": "Productivity",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "name": "openai-bundled",
+          "displayName": "OpenAI Bundled",
+          "local": true,
+          "total": 10,
+          "categories": [
+            {
+              "name": "Productivity",
+              "count": 7
+            },
+            {
+              "name": "Developer Tools",
+              "count": 1
+            },
+            {
+              "name": "Education & Research",
+              "count": 1
+            },
+            {
+              "name": "Engineering",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "openai-curated-remote",
+          "displayName": "OpenAI Curated Remote",
+          "local": false,
+          "total": 3307,
+          "categories": [
+            {
+              "name": "Productivity",
+              "count": 686
+            },
+            {
+              "name": "Business & Operations",
+              "count": 623
+            },
+            {
+              "name": "Other",
+              "count": 439
+            },
+            {
+              "name": "Finance",
+              "count": 337
+            },
+            {
+              "name": "Travel",
+              "count": 268
+            },
+            {
+              "name": "Developer Tools",
+              "count": 267
+            },
+            {
+              "name": "Education & Research",
+              "count": 179
+            },
+            {
+              "name": "Data & Analytics",
+              "count": 137
+            },
+            {
+              "name": "Creativity",
+              "count": 126
+            },
+            {
+              "name": "Entertainment",
+              "count": 111
+            },
+            {
+              "name": "Healthcare",
+              "count": 75
+            },
+            {
+              "name": "Communication",
+              "count": 26
+            },
+            {
+              "name": "Security",
+              "count": 26
+            },
+            {
+              "name": "Scientific Research",
+              "count": 7
+            }
+          ]
+        }
+      ],
+      "total": 3322,
+      "categories": [
+        {
+          "name": "Productivity",
+          "count": 698
+        },
+        {
+          "name": "Business & Operations",
+          "count": 623
+        },
+        {
+          "name": "Other",
+          "count": 439
+        },
+        {
+          "name": "Finance",
+          "count": 337
+        },
+        {
+          "name": "Developer Tools",
+          "count": 268
+        },
+        {
+          "name": "Travel",
+          "count": 268
+        },
+        {
+          "name": "Education & Research",
+          "count": 180
+        },
+        {
+          "name": "Data & Analytics",
+          "count": 137
+        },
+        {
+          "name": "Creativity",
+          "count": 126
+        },
+        {
+          "name": "Entertainment",
+          "count": 111
+        },
+        {
+          "name": "Healthcare",
+          "count": 75
+        },
+        {
+          "name": "Communication",
+          "count": 26
+        },
+        {
+          "name": "Security",
+          "count": 26
+        },
+        {
+          "name": "Scientific Research",
+          "count": 7
+        },
+        {
+          "name": "Engineering",
+          "count": 1
+        }
+      ],
+      "sourceTypes": [
+        {
+          "name": "remote",
+          "count": 3307
+        },
+        {
+          "name": "local",
+          "count": 15
+        }
+      ],
+      "installPolicies": [
+        {
+          "name": "AVAILABLE",
+          "count": 3306
+        },
+        {
+          "name": "NOT_AVAILABLE",
+          "count": 14
+        },
+        {
+          "name": "INSTALLED_BY_DEFAULT",
+          "count": 2
+        }
+      ],
+      "authPolicies": [
+        {
+          "name": "ON_INSTALL",
+          "count": 3306
+        },
+        {
+          "name": "ON_USE",
+          "count": 16
+        }
+      ],
+      "availability": [
+        {
+          "name": "AVAILABLE",
+          "count": 3308
+        },
+        {
+          "name": "DISABLED_BY_ADMIN",
+          "count": 14
+        }
+      ],
+      "providerInsights": {
+        "scope": [
+          {
+            "name": "Third-party",
+            "count": 3259
+          },
+          {
+            "name": "OpenAI",
+            "count": 62
+          },
+          {
+            "name": "Unspecified",
+            "count": 1
+          }
+        ],
+        "distinctNamedProviders": 2858,
+        "distinctThirdPartyProviders": 2857,
+        "thirdPartyPlugins": 3259,
+        "metadataCoverage": {
+          "developerNamed": 3321,
+          "websiteLinked": 3204,
+          "both": 3204
+        },
+        "thirdPartyCategories": [
+          {
+            "name": "Productivity",
+            "count": 673,
+            "providerCount": 571
+          },
+          {
+            "name": "Business & Operations",
+            "count": 618,
+            "providerCount": 585
+          },
+          {
+            "name": "Other",
+            "count": 439,
+            "providerCount": 399
+          },
+          {
+            "name": "Finance",
+            "count": 334,
+            "providerCount": 314
+          },
+          {
+            "name": "Travel",
+            "count": 268,
+            "providerCount": 252
+          },
+          {
+            "name": "Developer Tools",
+            "count": 253,
+            "providerCount": 231
+          },
+          {
+            "name": "Education & Research",
+            "count": 176,
+            "providerCount": 166
+          },
+          {
+            "name": "Data & Analytics",
+            "count": 133,
+            "providerCount": 132
+          },
+          {
+            "name": "Creativity",
+            "count": 124,
+            "providerCount": 110
+          },
+          {
+            "name": "Entertainment",
+            "count": 111,
+            "providerCount": 89
+          },
+          {
+            "name": "Healthcare",
+            "count": 75,
+            "providerCount": 69
+          },
+          {
+            "name": "Security",
+            "count": 25,
+            "providerCount": 24
+          },
+          {
+            "name": "Communication",
+            "count": 23,
+            "providerCount": 23
+          },
+          {
+            "name": "Scientific Research",
+            "count": 7,
+            "providerCount": 7
+          }
+        ],
+        "topThirdPartyProviders": [
+          {
+            "provider": "Widget",
+            "providerScope": "Third-party",
+            "pluginCount": 35,
+            "categoryCount": 10,
+            "categories": [
+              "Business & Operations",
+              "Creativity",
+              "Developer Tools",
+              "Education & Research",
+              "Entertainment",
+              "Finance",
+              "Healthcare",
+              "Other",
+              "Productivity",
+              "Travel"
+            ],
+            "url": "https://www.widget.olutely.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "All your Horoscopes",
+              "Football- Games+results+scores",
+              "A-Z Holy Bible"
+            ]
+          },
+          {
+            "provider": "Spheric Admin Ltd",
+            "providerScope": "Third-party",
+            "pluginCount": 29,
+            "categoryCount": 7,
+            "categories": [
+              "Communication",
+              "Creativity",
+              "Education & Research",
+              "Entertainment",
+              "Other",
+              "Productivity",
+              "Travel"
+            ],
+            "url": "https://www.widget.olutely.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "Smart Chess:Train+Learn to win",
+              "Appy Coupons",
+              "AnyWhereMap - Navigate+Locate"
+            ]
+          },
+          {
+            "provider": "Rohas Nagpal",
+            "providerScope": "Third-party",
+            "pluginCount": 25,
+            "categoryCount": 1,
+            "categories": [
+              "Productivity"
+            ],
+            "url": "https://github.com/rohasnagpal/legal-ai-skills",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "Rohas Legal AI: Contracts",
+              "Rohas Legal AI: Litigation",
+              "Rohas Legal AI: Advisory"
+            ]
+          },
+          {
+            "provider": "App developer",
+            "providerScope": "Third-party",
+            "pluginCount": 19,
+            "categoryCount": 7,
+            "categories": [
+              "Business & Operations",
+              "Education & Research",
+              "Entertainment",
+              "Healthcare",
+              "Other",
+              "Productivity",
+              "Travel"
+            ],
+            "url": null,
+            "urlCoverage": 10,
+            "samplePlugins": [
+              "OpenAI Certified",
+              "Apple Music",
+              "Adobe Acrobat"
+            ]
+          },
+          {
+            "provider": "BEIKE YAN",
+            "providerScope": "Third-party",
+            "pluginCount": 17,
+            "categoryCount": 2,
+            "categories": [
+              "Developer Tools",
+              "Productivity"
+            ],
+            "url": null,
+            "urlCoverage": 17,
+            "samplePlugins": [
+              "API Documentation Checker",
+              "AI Delivery Evidence Checker",
+              "RFP Response Checker"
+            ]
+          },
+          {
+            "provider": "SonicJobs Inc.",
+            "providerScope": "Third-party",
+            "pluginCount": 13,
+            "categoryCount": 2,
+            "categories": [
+              "Business & Operations",
+              "Productivity"
+            ],
+            "url": null,
+            "urlCoverage": 3,
+            "samplePlugins": [
+              "SonicJobs",
+              "Disney Careers",
+              "Dell Tech Careers"
+            ]
+          },
+          {
+            "provider": "Yaps AI",
+            "providerScope": "Third-party",
+            "pluginCount": 12,
+            "categoryCount": 2,
+            "categories": [
+              "Creativity",
+              "Productivity"
+            ],
+            "url": "https://www.yaps.ai/codex?utm_source=codex&utm_medium=plugin&utm_campaign=official_plugins",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "Yaps Memory",
+              "Yaps Dictation",
+              "Yaps Transcription"
+            ]
+          },
+          {
+            "provider": "Pyxl",
+            "providerScope": "Third-party",
+            "pluginCount": 11,
+            "categoryCount": 6,
+            "categories": [
+              "Business & Operations",
+              "Creativity",
+              "Developer Tools",
+              "Finance",
+              "Other",
+              "Productivity"
+            ],
+            "url": null,
+            "urlCoverage": 5,
+            "samplePlugins": [
+              "Astro Scope: Astrology",
+              "RewriteLy Humanizer",
+              "IHate.ai Humanaizer"
+            ]
+          },
+          {
+            "provider": "Mamdouh Aboammar",
+            "providerScope": "Third-party",
+            "pluginCount": 11,
+            "categoryCount": 4,
+            "categories": [
+              "Business & Operations",
+              "Creativity",
+              "Developer Tools",
+              "Productivity"
+            ],
+            "url": null,
+            "urlCoverage": 8,
+            "samplePlugins": [
+              "LinkedIn Animated Infographics",
+              "Riqor",
+              "Plugin Autopilot"
+            ]
+          },
+          {
+            "provider": "Layer 3 Labs",
+            "providerScope": "Third-party",
+            "pluginCount": 10,
+            "categoryCount": 5,
+            "categories": [
+              "Entertainment",
+              "Finance",
+              "Healthcare",
+              "Other",
+              "Travel"
+            ],
+            "url": "https://www.layer3labs.io/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "WeightWise",
+              "InvestmentIQ",
+              "WealthCheck Financial Planner"
+            ]
+          },
+          {
+            "provider": "Sider AI",
+            "providerScope": "Third-party",
+            "pluginCount": 10,
+            "categoryCount": 2,
+            "categories": [
+              "Education & Research",
+              "Productivity"
+            ],
+            "url": null,
+            "urlCoverage": 5,
+            "samplePlugins": [
+              "Sider Scholar",
+              "Sider Recorder & Transcriber",
+              "Ace Quiz Maker"
+            ]
+          },
+          {
+            "provider": "Appcast Inc",
+            "providerScope": "Third-party",
+            "pluginCount": 9,
+            "categoryCount": 1,
+            "categories": [
+              "Productivity"
+            ],
+            "url": null,
+            "urlCoverage": 9,
+            "samplePlugins": [
+              "Cox Careers",
+              "Success Academy Careers",
+              "Clean Harbors Careers"
+            ]
+          }
+        ],
+        "linkedThirdPartyProviders": [
+          {
+            "provider": "Widget",
+            "providerScope": "Third-party",
+            "pluginCount": 35,
+            "categoryCount": 10,
+            "categories": [
+              "Business & Operations",
+              "Creativity",
+              "Developer Tools",
+              "Education & Research",
+              "Entertainment",
+              "Finance",
+              "Healthcare",
+              "Other",
+              "Productivity",
+              "Travel"
+            ],
+            "url": "https://www.widget.olutely.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "All your Horoscopes",
+              "Football- Games+results+scores",
+              "A-Z Holy Bible"
+            ]
+          },
+          {
+            "provider": "Spheric Admin Ltd",
+            "providerScope": "Third-party",
+            "pluginCount": 29,
+            "categoryCount": 7,
+            "categories": [
+              "Communication",
+              "Creativity",
+              "Education & Research",
+              "Entertainment",
+              "Other",
+              "Productivity",
+              "Travel"
+            ],
+            "url": "https://www.widget.olutely.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "Smart Chess:Train+Learn to win",
+              "Appy Coupons",
+              "AnyWhereMap - Navigate+Locate"
+            ]
+          },
+          {
+            "provider": "Rohas Nagpal",
+            "providerScope": "Third-party",
+            "pluginCount": 25,
+            "categoryCount": 1,
+            "categories": [
+              "Productivity"
+            ],
+            "url": "https://github.com/rohasnagpal/legal-ai-skills",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "Rohas Legal AI: Contracts",
+              "Rohas Legal AI: Litigation",
+              "Rohas Legal AI: Advisory"
+            ]
+          },
+          {
+            "provider": "Yaps AI",
+            "providerScope": "Third-party",
+            "pluginCount": 12,
+            "categoryCount": 2,
+            "categories": [
+              "Creativity",
+              "Productivity"
+            ],
+            "url": "https://www.yaps.ai/codex?utm_source=codex&utm_medium=plugin&utm_campaign=official_plugins",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "Yaps Memory",
+              "Yaps Dictation",
+              "Yaps Transcription"
+            ]
+          },
+          {
+            "provider": "Layer 3 Labs",
+            "providerScope": "Third-party",
+            "pluginCount": 10,
+            "categoryCount": 5,
+            "categories": [
+              "Entertainment",
+              "Finance",
+              "Healthcare",
+              "Other",
+              "Travel"
+            ],
+            "url": "https://www.layer3labs.io/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "WeightWise",
+              "InvestmentIQ",
+              "WealthCheck Financial Planner"
+            ]
+          },
+          {
+            "provider": "Windsor.ai",
+            "providerScope": "Third-party",
+            "pluginCount": 5,
+            "categoryCount": 1,
+            "categories": [
+              "Business & Operations"
+            ],
+            "url": "https://windsor.ai/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "Windsor.ai",
+              "Windsor.ai Facebook Ads",
+              "Windsor.ai Instagram"
+            ]
+          },
+          {
+            "provider": "Spheric Admin Limited",
+            "providerScope": "Third-party",
+            "pluginCount": 3,
+            "categoryCount": 3,
+            "categories": [
+              "Education & Research",
+              "Finance",
+              "Productivity"
+            ],
+            "url": "https://www.widget.olutely.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "AnyLessonPlan for Teachers",
+              "1-2-3-List",
+              "AnyMortgageCalculator"
+            ]
+          },
+          {
+            "provider": "B12",
+            "providerScope": "Third-party",
+            "pluginCount": 3,
+            "categoryCount": 2,
+            "categories": [
+              "Creativity",
+              "Productivity"
+            ],
+            "url": "https://www.b12.io/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "B12 Website Generator",
+              "Blog Generator",
+              "Logo Generator"
+            ]
+          }
+        ]
+      }
+    },
+    "tuiProjection": {
+      "marketplaces": [
+        {
+          "name": "openai-primary-runtime",
+          "displayName": null,
+          "local": true,
+          "total": 5,
+          "categories": [
+            {
+              "name": "Productivity",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "name": "openai-curated-remote",
+          "displayName": "OpenAI Curated Remote",
+          "local": false,
+          "total": 3307,
+          "categories": [
+            {
+              "name": "Productivity",
+              "count": 686
+            },
+            {
+              "name": "Business & Operations",
+              "count": 623
+            },
+            {
+              "name": "Other",
+              "count": 439
+            },
+            {
+              "name": "Finance",
+              "count": 337
+            },
+            {
+              "name": "Travel",
+              "count": 268
+            },
+            {
+              "name": "Developer Tools",
+              "count": 267
+            },
+            {
+              "name": "Education & Research",
+              "count": 179
+            },
+            {
+              "name": "Data & Analytics",
+              "count": 137
+            },
+            {
+              "name": "Creativity",
+              "count": 126
+            },
+            {
+              "name": "Entertainment",
+              "count": 111
+            },
+            {
+              "name": "Healthcare",
+              "count": 75
+            },
+            {
+              "name": "Communication",
+              "count": 26
+            },
+            {
+              "name": "Security",
+              "count": 26
+            },
+            {
+              "name": "Scientific Research",
+              "count": 7
+            }
+          ]
+        }
+      ],
+      "total": 3312,
+      "categories": [
+        {
+          "name": "Productivity",
+          "count": 691
+        },
+        {
+          "name": "Business & Operations",
+          "count": 623
+        },
+        {
+          "name": "Other",
+          "count": 439
+        },
+        {
+          "name": "Finance",
+          "count": 337
+        },
+        {
+          "name": "Travel",
+          "count": 268
+        },
+        {
+          "name": "Developer Tools",
+          "count": 267
+        },
+        {
+          "name": "Education & Research",
+          "count": 179
+        },
+        {
+          "name": "Data & Analytics",
+          "count": 137
+        },
+        {
+          "name": "Creativity",
+          "count": 126
+        },
+        {
+          "name": "Entertainment",
+          "count": 111
+        },
+        {
+          "name": "Healthcare",
+          "count": 75
+        },
+        {
+          "name": "Communication",
+          "count": 26
+        },
+        {
+          "name": "Security",
+          "count": 26
+        },
+        {
+          "name": "Scientific Research",
+          "count": 7
+        }
+      ],
+      "sourceTypes": [
+        {
+          "name": "remote",
+          "count": 3307
+        },
+        {
+          "name": "local",
+          "count": 5
+        }
+      ],
+      "installPolicies": [
+        {
+          "name": "AVAILABLE",
+          "count": 3296
+        },
+        {
+          "name": "NOT_AVAILABLE",
+          "count": 14
+        },
+        {
+          "name": "INSTALLED_BY_DEFAULT",
+          "count": 2
+        }
+      ],
+      "authPolicies": [
+        {
+          "name": "ON_INSTALL",
+          "count": 3296
+        },
+        {
+          "name": "ON_USE",
+          "count": 16
+        }
+      ],
+      "availability": [
+        {
+          "name": "AVAILABLE",
+          "count": 3298
+        },
+        {
+          "name": "DISABLED_BY_ADMIN",
+          "count": 14
+        }
+      ],
+      "providerInsights": {
+        "scope": [
+          {
+            "name": "Third-party",
+            "count": 3259
+          },
+          {
+            "name": "OpenAI",
+            "count": 53
+          }
+        ],
+        "distinctNamedProviders": 2858,
+        "distinctThirdPartyProviders": 2857,
+        "thirdPartyPlugins": 3259,
+        "metadataCoverage": {
+          "developerNamed": 3312,
+          "websiteLinked": 3195,
+          "both": 3195
+        },
+        "thirdPartyCategories": [
+          {
+            "name": "Productivity",
+            "count": 673,
+            "providerCount": 571
+          },
+          {
+            "name": "Business & Operations",
+            "count": 618,
+            "providerCount": 585
+          },
+          {
+            "name": "Other",
+            "count": 439,
+            "providerCount": 399
+          },
+          {
+            "name": "Finance",
+            "count": 334,
+            "providerCount": 314
+          },
+          {
+            "name": "Travel",
+            "count": 268,
+            "providerCount": 252
+          },
+          {
+            "name": "Developer Tools",
+            "count": 253,
+            "providerCount": 231
+          },
+          {
+            "name": "Education & Research",
+            "count": 176,
+            "providerCount": 166
+          },
+          {
+            "name": "Data & Analytics",
+            "count": 133,
+            "providerCount": 132
+          },
+          {
+            "name": "Creativity",
+            "count": 124,
+            "providerCount": 110
+          },
+          {
+            "name": "Entertainment",
+            "count": 111,
+            "providerCount": 89
+          },
+          {
+            "name": "Healthcare",
+            "count": 75,
+            "providerCount": 69
+          },
+          {
+            "name": "Security",
+            "count": 25,
+            "providerCount": 24
+          },
+          {
+            "name": "Communication",
+            "count": 23,
+            "providerCount": 23
+          },
+          {
+            "name": "Scientific Research",
+            "count": 7,
+            "providerCount": 7
+          }
+        ],
+        "topThirdPartyProviders": [
+          {
+            "provider": "Widget",
+            "providerScope": "Third-party",
+            "pluginCount": 35,
+            "categoryCount": 10,
+            "categories": [
+              "Business & Operations",
+              "Creativity",
+              "Developer Tools",
+              "Education & Research",
+              "Entertainment",
+              "Finance",
+              "Healthcare",
+              "Other",
+              "Productivity",
+              "Travel"
+            ],
+            "url": "https://www.widget.olutely.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "All your Horoscopes",
+              "Football- Games+results+scores",
+              "A-Z Holy Bible"
+            ]
+          },
+          {
+            "provider": "Spheric Admin Ltd",
+            "providerScope": "Third-party",
+            "pluginCount": 29,
+            "categoryCount": 7,
+            "categories": [
+              "Communication",
+              "Creativity",
+              "Education & Research",
+              "Entertainment",
+              "Other",
+              "Productivity",
+              "Travel"
+            ],
+            "url": "https://www.widget.olutely.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "Smart Chess:Train+Learn to win",
+              "Appy Coupons",
+              "AnyWhereMap - Navigate+Locate"
+            ]
+          },
+          {
+            "provider": "Rohas Nagpal",
+            "providerScope": "Third-party",
+            "pluginCount": 25,
+            "categoryCount": 1,
+            "categories": [
+              "Productivity"
+            ],
+            "url": "https://github.com/rohasnagpal/legal-ai-skills",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "Rohas Legal AI: Contracts",
+              "Rohas Legal AI: Litigation",
+              "Rohas Legal AI: Advisory"
+            ]
+          },
+          {
+            "provider": "App developer",
+            "providerScope": "Third-party",
+            "pluginCount": 19,
+            "categoryCount": 7,
+            "categories": [
+              "Business & Operations",
+              "Education & Research",
+              "Entertainment",
+              "Healthcare",
+              "Other",
+              "Productivity",
+              "Travel"
+            ],
+            "url": null,
+            "urlCoverage": 10,
+            "samplePlugins": [
+              "OpenAI Certified",
+              "Apple Music",
+              "Adobe Acrobat"
+            ]
+          },
+          {
+            "provider": "BEIKE YAN",
+            "providerScope": "Third-party",
+            "pluginCount": 17,
+            "categoryCount": 2,
+            "categories": [
+              "Developer Tools",
+              "Productivity"
+            ],
+            "url": null,
+            "urlCoverage": 17,
+            "samplePlugins": [
+              "API Documentation Checker",
+              "AI Delivery Evidence Checker",
+              "RFP Response Checker"
+            ]
+          },
+          {
+            "provider": "SonicJobs Inc.",
+            "providerScope": "Third-party",
+            "pluginCount": 13,
+            "categoryCount": 2,
+            "categories": [
+              "Business & Operations",
+              "Productivity"
+            ],
+            "url": null,
+            "urlCoverage": 3,
+            "samplePlugins": [
+              "SonicJobs",
+              "Disney Careers",
+              "Dell Tech Careers"
+            ]
+          },
+          {
+            "provider": "Yaps AI",
+            "providerScope": "Third-party",
+            "pluginCount": 12,
+            "categoryCount": 2,
+            "categories": [
+              "Creativity",
+              "Productivity"
+            ],
+            "url": "https://www.yaps.ai/codex?utm_source=codex&utm_medium=plugin&utm_campaign=official_plugins",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "Yaps Memory",
+              "Yaps Dictation",
+              "Yaps Transcription"
+            ]
+          },
+          {
+            "provider": "Pyxl",
+            "providerScope": "Third-party",
+            "pluginCount": 11,
+            "categoryCount": 6,
+            "categories": [
+              "Business & Operations",
+              "Creativity",
+              "Developer Tools",
+              "Finance",
+              "Other",
+              "Productivity"
+            ],
+            "url": null,
+            "urlCoverage": 5,
+            "samplePlugins": [
+              "Astro Scope: Astrology",
+              "RewriteLy Humanizer",
+              "IHate.ai Humanaizer"
+            ]
+          },
+          {
+            "provider": "Mamdouh Aboammar",
+            "providerScope": "Third-party",
+            "pluginCount": 11,
+            "categoryCount": 4,
+            "categories": [
+              "Business & Operations",
+              "Creativity",
+              "Developer Tools",
+              "Productivity"
+            ],
+            "url": null,
+            "urlCoverage": 8,
+            "samplePlugins": [
+              "LinkedIn Animated Infographics",
+              "Riqor",
+              "Plugin Autopilot"
+            ]
+          },
+          {
+            "provider": "Layer 3 Labs",
+            "providerScope": "Third-party",
+            "pluginCount": 10,
+            "categoryCount": 5,
+            "categories": [
+              "Entertainment",
+              "Finance",
+              "Healthcare",
+              "Other",
+              "Travel"
+            ],
+            "url": "https://www.layer3labs.io/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "WeightWise",
+              "InvestmentIQ",
+              "WealthCheck Financial Planner"
+            ]
+          },
+          {
+            "provider": "Sider AI",
+            "providerScope": "Third-party",
+            "pluginCount": 10,
+            "categoryCount": 2,
+            "categories": [
+              "Education & Research",
+              "Productivity"
+            ],
+            "url": null,
+            "urlCoverage": 5,
+            "samplePlugins": [
+              "Sider Scholar",
+              "Sider Recorder & Transcriber",
+              "Ace Quiz Maker"
+            ]
+          },
+          {
+            "provider": "Appcast Inc",
+            "providerScope": "Third-party",
+            "pluginCount": 9,
+            "categoryCount": 1,
+            "categories": [
+              "Productivity"
+            ],
+            "url": null,
+            "urlCoverage": 9,
+            "samplePlugins": [
+              "Cox Careers",
+              "Success Academy Careers",
+              "Clean Harbors Careers"
+            ]
+          }
+        ],
+        "linkedThirdPartyProviders": [
+          {
+            "provider": "Widget",
+            "providerScope": "Third-party",
+            "pluginCount": 35,
+            "categoryCount": 10,
+            "categories": [
+              "Business & Operations",
+              "Creativity",
+              "Developer Tools",
+              "Education & Research",
+              "Entertainment",
+              "Finance",
+              "Healthcare",
+              "Other",
+              "Productivity",
+              "Travel"
+            ],
+            "url": "https://www.widget.olutely.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "All your Horoscopes",
+              "Football- Games+results+scores",
+              "A-Z Holy Bible"
+            ]
+          },
+          {
+            "provider": "Spheric Admin Ltd",
+            "providerScope": "Third-party",
+            "pluginCount": 29,
+            "categoryCount": 7,
+            "categories": [
+              "Communication",
+              "Creativity",
+              "Education & Research",
+              "Entertainment",
+              "Other",
+              "Productivity",
+              "Travel"
+            ],
+            "url": "https://www.widget.olutely.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "Smart Chess:Train+Learn to win",
+              "Appy Coupons",
+              "AnyWhereMap - Navigate+Locate"
+            ]
+          },
+          {
+            "provider": "Rohas Nagpal",
+            "providerScope": "Third-party",
+            "pluginCount": 25,
+            "categoryCount": 1,
+            "categories": [
+              "Productivity"
+            ],
+            "url": "https://github.com/rohasnagpal/legal-ai-skills",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "Rohas Legal AI: Contracts",
+              "Rohas Legal AI: Litigation",
+              "Rohas Legal AI: Advisory"
+            ]
+          },
+          {
+            "provider": "Yaps AI",
+            "providerScope": "Third-party",
+            "pluginCount": 12,
+            "categoryCount": 2,
+            "categories": [
+              "Creativity",
+              "Productivity"
+            ],
+            "url": "https://www.yaps.ai/codex?utm_source=codex&utm_medium=plugin&utm_campaign=official_plugins",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "Yaps Memory",
+              "Yaps Dictation",
+              "Yaps Transcription"
+            ]
+          },
+          {
+            "provider": "Layer 3 Labs",
+            "providerScope": "Third-party",
+            "pluginCount": 10,
+            "categoryCount": 5,
+            "categories": [
+              "Entertainment",
+              "Finance",
+              "Healthcare",
+              "Other",
+              "Travel"
+            ],
+            "url": "https://www.layer3labs.io/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "WeightWise",
+              "InvestmentIQ",
+              "WealthCheck Financial Planner"
+            ]
+          },
+          {
+            "provider": "Windsor.ai",
+            "providerScope": "Third-party",
+            "pluginCount": 5,
+            "categoryCount": 1,
+            "categories": [
+              "Business & Operations"
+            ],
+            "url": "https://windsor.ai/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "Windsor.ai",
+              "Windsor.ai Facebook Ads",
+              "Windsor.ai Instagram"
+            ]
+          },
+          {
+            "provider": "Spheric Admin Limited",
+            "providerScope": "Third-party",
+            "pluginCount": 3,
+            "categoryCount": 3,
+            "categories": [
+              "Education & Research",
+              "Finance",
+              "Productivity"
+            ],
+            "url": "https://www.widget.olutely.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "AnyLessonPlan for Teachers",
+              "1-2-3-List",
+              "AnyMortgageCalculator"
+            ]
+          },
+          {
+            "provider": "B12",
+            "providerScope": "Third-party",
+            "pluginCount": 3,
+            "categoryCount": 2,
+            "categories": [
+              "Creativity",
+              "Productivity"
+            ],
+            "url": "https://www.b12.io/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "B12 Website Generator",
+              "Blog Generator",
+              "Logo Generator"
+            ]
+          }
+        ]
+      },
+      "hiddenMarketplaces": [
+        "openai-bundled"
+      ]
+    },
+    "sections": {
+      "local": {
+        "total": 195,
+        "marketplaces": [
+          {
+            "name": "openai-primary-runtime",
+            "total": 5
+          },
+          {
+            "name": "openai-bundled",
+            "total": 10
+          },
+          {
+            "name": "openai-curated",
+            "total": 180
+          }
+        ],
+        "loadErrors": []
+      },
+      "vertical": {
+        "total": 0,
+        "marketplaces": [],
+        "loadErrors": []
+      },
+      "workspace-directory": {
+        "total": 0,
+        "marketplaces": [],
+        "loadErrors": []
+      },
+      "shared-with-me": {
+        "total": 0,
+        "marketplaces": [],
+        "loadErrors": []
+      },
+      "created-by-me-remote": {
+        "total": 0,
+        "marketplaces": [],
+        "loadErrors": []
+      }
+    },
+    "featuredPluginIds": 29,
+    "marketplaceLoadErrors": []
+  },
+  "repositories": {
+    "codex": {
+      "git": {
+        "head": "18b9e7fd9e3f6670cc4f300338e44050b2c301e4",
+        "originMain": "6be2a6ca952ac9f70676ce4dd07fda27175aa9dd",
+        "committedAt": "2026-08-28T02:39:47Z",
+        "subject": "Include thread source in realtime connection metadata (#41250)",
+        "branchStatus": "## main...origin/main [behind 1]",
+        "clean": true,
+        "ahead": 0,
+        "behind": 1
+      },
+      "interfaces": {
+        "marketplaceRequests": [
+          "marketplace/add",
+          "marketplace/remove",
+          "marketplace/upgrade"
+        ],
+        "pluginRequests": [
+          "plugin/install",
+          "plugin/installed",
+          "plugin/list",
+          "plugin/read",
+          "plugin/search",
+          "plugin/share/checkout",
+          "plugin/share/delete",
+          "plugin/share/list",
+          "plugin/share/save",
+          "plugin/share/updateTargets",
+          "plugin/skill/read",
+          "plugin/uninstall"
+        ],
+        "appRequests": [
+          "app/installed",
+          "app/list",
+          "app/read"
+        ],
+        "appNotifications": [
+          "app/list/updated"
+        ],
+        "slashPlugins": true,
+        "tuiHiddenMarketplaces": [
+          "openai-bundled"
+        ]
+      },
+      "curatedSyncSources": {
+        "git": "https://github.com/openai/plugins.git",
+        "backupExport": "https://chatgpt.com/backend-api/plugins/export/curated"
+      }
+    },
+    "plugins": {
+      "git": {
+        "head": "6d99ee149c9fe3c7a55b96cab062cadc1ad36a9d",
+        "originMain": "6d99ee149c9fe3c7a55b96cab062cadc1ad36a9d",
+        "committedAt": "2026-08-27T13:29:11-07:00",
+        "subject": "Restore missing top-50 curated plugins (#390)",
+        "branchStatus": "## main...origin/main",
+        "clean": true,
+        "ahead": 0,
+        "behind": 0
+      },
+      "directories": 62,
+      "manifests": 62,
+      "main": {
+        "name": "openai-curated",
+        "displayName": "Codex official",
+        "total": 62,
+        "categories": [
+          {
+            "name": "Developer Tools",
+            "count": 24
+          },
+          {
+            "name": "Productivity",
+            "count": 12
+          },
+          {
+            "name": "Creativity",
+            "count": 9
+          },
+          {
+            "name": "Communication",
+            "count": 5
+          },
+          {
+            "name": "Education & Research",
+            "count": 4
+          },
+          {
+            "name": "Data & Analytics",
+            "count": 3
+          },
+          {
+            "name": "Finance",
+            "count": 2
+          },
+          {
+            "name": "Business & Operations",
+            "count": 1
+          },
+          {
+            "name": "Scientific Research",
+            "count": 1
+          },
+          {
+            "name": "Security",
+            "count": 1
+          }
+        ],
+        "authentication": [
+          {
+            "name": "ON_INSTALL",
+            "count": 55
+          },
+          {
+            "name": "ON_USE",
+            "count": 7
+          }
+        ],
+        "productScope": {
+          "codexOnly": 15,
+          "unrestricted": 47
+        },
+        "sourceTypes": [
+          {
+            "name": "local",
+            "count": 62
+          }
+        ],
+        "names": [
+          "adobe",
+          "airtable",
+          "atlassian-rovo",
+          "boltz-api-cli",
+          "build-ios-apps",
+          "build-macos-apps",
+          "build-web-apps",
+          "build-web-data-visualization",
+          "canva",
+          "chatcut",
+          "circleci",
+          "clickup",
+          "cloudflare",
+          "coderabbit",
+          "codex-security",
+          "consensus",
+          "creative-production",
+          "data-analytics",
+          "datadog",
+          "dropbox",
+          "expo",
+          "figma",
+          "game-studio",
+          "github",
+          "gmail",
+          "google-calendar",
+          "google-drive",
+          "granola",
+          "higgsfield",
+          "hyperframes",
+          "life-science-research",
+          "linear",
+          "lovable",
+          "magicpath",
+          "mixpanel-headless",
+          "monday-com",
+          "ngs-analysis",
+          "notion",
+          "nvidia",
+          "openai-ads-conversions",
+          "openai-developers",
+          "outlook-calendar",
+          "outlook-email",
+          "plugin-eval",
+          "posthog",
+          "product-design",
+          "public-equity-investing",
+          "remotion",
+          "sentry",
+          "sharepoint",
+          "shopify",
+          "slack",
+          "stripe",
+          "supabase",
+          "superpowers",
+          "teams",
+          "temporal",
+          "test-android-apps",
+          "twilio-developer-kit",
+          "vercel",
+          "zoom",
+          "zotero"
+        ]
+      },
+      "api": {
+        "name": "openai-api-curated",
+        "displayName": "Codex official",
+        "total": 46,
+        "categories": [
+          {
+            "name": "Developer Tools",
+            "count": 22
+          },
+          {
+            "name": "Creativity",
+            "count": 7
+          },
+          {
+            "name": "Productivity",
+            "count": 7
+          },
+          {
+            "name": "Education & Research",
+            "count": 4
+          },
+          {
+            "name": "Data & Analytics",
+            "count": 2
+          },
+          {
+            "name": "Communication",
+            "count": 1
+          },
+          {
+            "name": "Finance",
+            "count": 1
+          },
+          {
+            "name": "Scientific Research",
+            "count": 1
+          },
+          {
+            "name": "Security",
+            "count": 1
+          }
+        ],
+        "authentication": [
+          {
+            "name": "ON_INSTALL",
+            "count": 43
+          },
+          {
+            "name": "ON_USE",
+            "count": 3
+          }
+        ],
+        "productScope": {
+          "codexOnly": 17,
+          "unrestricted": 29
+        },
+        "sourceTypes": [
+          {
+            "name": "local",
+            "count": 46
+          }
+        ],
+        "names": [
+          "atlassian-rovo",
+          "boltz-api-cli",
+          "build-ios-apps",
+          "build-macos-apps",
+          "build-web-apps",
+          "build-web-data-visualization",
+          "canva",
+          "chatcut",
+          "circleci",
+          "clickup",
+          "cloudflare",
+          "coderabbit",
+          "codex-security",
+          "consensus",
+          "datadog",
+          "dropbox",
+          "expo",
+          "figma",
+          "game-studio",
+          "granola",
+          "higgsfield",
+          "hyperframes",
+          "life-science-research",
+          "linear",
+          "magicpath",
+          "mixpanel-headless",
+          "monday-com",
+          "ngs-analysis",
+          "notion",
+          "nvidia",
+          "openai-ads-conversions",
+          "openai-developers",
+          "plugin-eval",
+          "posthog",
+          "product-design",
+          "remotion",
+          "sentry",
+          "slack",
+          "stripe",
+          "supabase",
+          "superpowers",
+          "temporal",
+          "test-android-apps",
+          "twilio-developer-kit",
+          "vercel",
+          "zotero"
+        ]
+      },
+      "apiSubsetOfMain": true,
+      "mainNotApi": [
+        "adobe",
+        "airtable",
+        "creative-production",
+        "data-analytics",
+        "github",
+        "gmail",
+        "google-calendar",
+        "google-drive",
+        "lovable",
+        "outlook-calendar",
+        "outlook-email",
+        "public-equity-investing",
+        "sharepoint",
+        "shopify",
+        "teams",
+        "zoom"
+      ],
+      "packageIndex": [
+        {
+          "name": "adobe",
+          "plugin": "adobe",
+          "displayName": "Adobe",
+          "provider": "Adobe Inc",
+          "providerScope": "Third-party",
+          "category": "Creativity",
+          "url": "https://www.adobe.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 6,
+          "allSkillFiles": 6,
+          "appReferences": 1,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "airtable",
+          "plugin": "airtable",
+          "displayName": "Airtable",
+          "provider": "Airtable",
+          "providerScope": "Third-party",
+          "category": "Productivity",
+          "url": "https://airtable.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 3,
+          "allSkillFiles": 3,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "atlassian-rovo",
+          "plugin": "atlassian-rovo",
+          "displayName": "Atlassian Rovo",
+          "provider": "Atlassian",
+          "providerScope": "Third-party",
+          "category": "Productivity",
+          "url": "https://www.atlassian.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 1,
+          "hasHooks": false
+        },
+        {
+          "name": "boltz-api-cli",
+          "plugin": "boltz-api-cli",
+          "displayName": "Boltz",
+          "provider": "Boltz",
+          "providerScope": "Third-party",
+          "category": "Scientific Research",
+          "url": "https://boltz.bio/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 8,
+          "allSkillFiles": 8,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "build-ios-apps",
+          "plugin": "build-ios-apps",
+          "displayName": "Build iOS Apps",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 9,
+          "allSkillFiles": 9,
+          "appReferences": 0,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 1,
+          "hasHooks": false
+        },
+        {
+          "name": "build-macos-apps",
+          "plugin": "build-macos-apps",
+          "displayName": "Build macOS Apps",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 11,
+          "allSkillFiles": 11,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 3,
+          "agentFiles": 1,
+          "hasHooks": false
+        },
+        {
+          "name": "build-web-apps",
+          "plugin": "build-web-apps",
+          "displayName": "Build Web Apps",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 6,
+          "allSkillFiles": 6,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 1,
+          "hasHooks": false
+        },
+        {
+          "name": "build-web-data-visualization",
+          "plugin": "build-web-data-visualization",
+          "displayName": "Build Web Data Visualization",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 18,
+          "allSkillFiles": 18,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 1,
+          "hasHooks": false
+        },
+        {
+          "name": "canva",
+          "plugin": "canva",
+          "displayName": "Canva",
+          "provider": "Canva Pty Ltd.",
+          "providerScope": "Third-party",
+          "category": "Creativity",
+          "url": "https://www.canva.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 8,
+          "allSkillFiles": 8,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "chatcut",
+          "plugin": "chatcut",
+          "displayName": "ChatCut",
+          "provider": "ChatCut",
+          "providerScope": "Third-party",
+          "category": "Creativity",
+          "url": "https://chatcut.io/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 1,
+          "allSkillFiles": 1,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "circleci",
+          "plugin": "circleci",
+          "displayName": "CircleCI",
+          "provider": "CircleCI",
+          "providerScope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://circleci.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 4,
+          "allSkillFiles": 4,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "clickup",
+          "plugin": "clickup",
+          "displayName": "ClickUp",
+          "provider": "ClickUp",
+          "providerScope": "Third-party",
+          "category": "Productivity",
+          "url": "https://clickup.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "cloudflare",
+          "plugin": "cloudflare",
+          "displayName": "Cloudflare",
+          "provider": "Cloudflare",
+          "providerScope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://workers.cloudflare.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 9,
+          "allSkillFiles": 9,
+          "appReferences": 0,
+          "mcpServers": 1,
+          "commandFiles": 2,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "coderabbit",
+          "plugin": "coderabbit",
+          "displayName": "CodeRabbit",
+          "provider": "CodeRabbit",
+          "providerScope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://coderabbit.ai/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 1,
+          "allSkillFiles": 1,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "codex-security",
+          "plugin": "codex-security",
+          "displayName": "Codex Security",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Security",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 14,
+          "allSkillFiles": 14,
+          "appReferences": 4,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "consensus",
+          "plugin": "consensus",
+          "displayName": "Consensus",
+          "provider": "Consensus",
+          "providerScope": "Third-party",
+          "category": "Education & Research",
+          "url": "https://consensus.app/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "creative-production",
+          "plugin": "creative-production",
+          "displayName": "Creative Production",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Creativity",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 2,
+          "allSkillFiles": 2,
+          "appReferences": 0,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "data-analytics",
+          "plugin": "data-analytics",
+          "displayName": "Data Analytics",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Data & Analytics",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 15,
+          "allSkillFiles": 18,
+          "appReferences": 23,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "datadog",
+          "plugin": "datadog",
+          "displayName": "Datadog (Preview)",
+          "provider": "Datadog",
+          "providerScope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://www.datadoghq.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "dropbox",
+          "plugin": "dropbox",
+          "displayName": "Dropbox",
+          "provider": "Dropbox",
+          "providerScope": "Third-party",
+          "category": "Productivity",
+          "url": "https://www.dropbox.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 6,
+          "allSkillFiles": 6,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "expo",
+          "plugin": "expo",
+          "displayName": "Expo",
+          "provider": "Expo",
+          "providerScope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://expo.dev/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 13,
+          "allSkillFiles": 13,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 1,
+          "agentFiles": 1,
+          "hasHooks": false
+        },
+        {
+          "name": "figma",
+          "plugin": "figma",
+          "displayName": "Figma",
+          "provider": "Figma",
+          "providerScope": "Third-party",
+          "category": "Creativity",
+          "url": "https://www.figma.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 12,
+          "allSkillFiles": 12,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 4,
+          "agentFiles": 5,
+          "hasHooks": true
+        },
+        {
+          "name": "game-studio",
+          "plugin": "game-studio",
+          "displayName": "Game Studio",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 9,
+          "allSkillFiles": 9,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "github",
+          "plugin": "github",
+          "displayName": "GitHub",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://github.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 2,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "gmail",
+          "plugin": "gmail",
+          "displayName": "Gmail",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Communication",
+          "url": "https://workspace.google.com/products/gmail/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "google-calendar",
+          "plugin": "google-calendar",
+          "displayName": "Google Calendar",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Productivity",
+          "url": "https://workspace.google.com/products/calendar/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "google-drive",
+          "plugin": "google-drive",
+          "displayName": "Google Drive",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Productivity",
+          "url": "https://workspace.google.com/products/drive/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 5,
+          "allSkillFiles": 5,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "granola",
+          "plugin": "granola",
+          "displayName": "Granola",
+          "provider": "Granola",
+          "providerScope": "Third-party",
+          "category": "Productivity",
+          "url": "https://www.granola.ai/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "higgsfield",
+          "plugin": "higgsfield",
+          "displayName": "Higgsfield",
+          "provider": "Higgsfield AI, Inc.",
+          "providerScope": "Third-party",
+          "category": "Creativity",
+          "url": "https://higgsfield.ai/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 3,
+          "allSkillFiles": 3,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "hyperframes",
+          "plugin": "hyperframes",
+          "displayName": "HyperFrames by HeyGen",
+          "provider": "HeyGen",
+          "providerScope": "Third-party",
+          "category": "Creativity",
+          "url": "https://hyperframes.heygen.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 5,
+          "allSkillFiles": 5,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "life-science-research",
+          "plugin": "life-science-research",
+          "displayName": "Life Science Research",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Education & Research",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 50,
+          "allSkillFiles": 50,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "linear",
+          "plugin": "linear",
+          "displayName": "Linear",
+          "provider": "Linear Orbit, Inc",
+          "providerScope": "Third-party",
+          "category": "Productivity",
+          "url": "https://linear.app/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "lovable",
+          "plugin": "lovable",
+          "displayName": "Lovable",
+          "provider": "Lovable Labs",
+          "providerScope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://lovable.dev/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "magicpath",
+          "plugin": "magicpath",
+          "displayName": "MagicPath",
+          "provider": "MagicPathAI",
+          "providerScope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://www.magicpath.ai/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 1,
+          "allSkillFiles": 1,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "mixpanel-headless",
+          "plugin": "mixpanel-headless",
+          "displayName": "Mixpanel Headless",
+          "provider": "Mixpanel",
+          "providerScope": "Third-party",
+          "category": "Data & Analytics",
+          "url": "https://mixpanel.com/home",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 4,
+          "allSkillFiles": 4,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "monday-com",
+          "plugin": "monday-com",
+          "displayName": "monday.com",
+          "provider": "monday.com",
+          "providerScope": "Third-party",
+          "category": "Productivity",
+          "url": "https://monday.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "ngs-analysis",
+          "plugin": "ngs-analysis",
+          "displayName": "Life Sciences NGS Analysis",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Education & Research",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 18,
+          "allSkillFiles": 18,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "notion",
+          "plugin": "notion",
+          "displayName": "Notion",
+          "provider": "Notion",
+          "providerScope": "Third-party",
+          "category": "Productivity",
+          "url": "https://www.notion.so/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 4,
+          "allSkillFiles": 4,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 1,
+          "hasHooks": false
+        },
+        {
+          "name": "nvidia",
+          "plugin": "nvidia",
+          "displayName": "NVIDIA",
+          "provider": "NVIDIA",
+          "providerScope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://www.nvidia.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 12,
+          "allSkillFiles": 12,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "openai-ads-conversions",
+          "plugin": "openai-ads-conversions",
+          "displayName": "OpenAI Ads Conversions",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://developers.openai.com/ads/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 1,
+          "allSkillFiles": 1,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "openai-developers",
+          "plugin": "openai-developers",
+          "displayName": "OpenAI Developers",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://platform.openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 5,
+          "allSkillFiles": 5,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "outlook-calendar",
+          "plugin": "outlook-calendar",
+          "displayName": "Outlook Calendar",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Productivity",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/outlook/calendar-app",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "outlook-email",
+          "plugin": "outlook-email",
+          "displayName": "Outlook Email",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Communication",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "plugin-eval",
+          "plugin": "plugin-eval",
+          "displayName": "Plugin Eval",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 5,
+          "allSkillFiles": 9,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "posthog",
+          "plugin": "posthog",
+          "displayName": "PostHog",
+          "provider": "PostHog Inc.",
+          "providerScope": "Third-party",
+          "category": "Data & Analytics",
+          "url": "https://posthog.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 1,
+          "allSkillFiles": 1,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "product-design",
+          "plugin": "product-design",
+          "displayName": "Product Design",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Creativity",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 10,
+          "allSkillFiles": 10,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 1,
+          "hasHooks": false
+        },
+        {
+          "name": "public-equity-investing",
+          "plugin": "public-equity-investing",
+          "displayName": "Public Equity Investing",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Finance",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 23,
+          "allSkillFiles": 23,
+          "appReferences": 15,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "remotion",
+          "plugin": "remotion",
+          "displayName": "Remotion",
+          "provider": "Remotion",
+          "providerScope": "Third-party",
+          "category": "Creativity",
+          "url": "https://remotion.dev/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 12,
+          "allSkillFiles": 12,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "sentry",
+          "plugin": "sentry",
+          "displayName": "Sentry",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://sentry.io/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 1,
+          "allSkillFiles": 1,
+          "appReferences": 0,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "sharepoint",
+          "plugin": "sharepoint",
+          "displayName": "SharePoint",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Productivity",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "shopify",
+          "plugin": "shopify",
+          "displayName": "Shopify",
+          "provider": "Shopify",
+          "providerScope": "Third-party",
+          "category": "Business & Operations",
+          "url": "https://shopify.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 20,
+          "allSkillFiles": 20,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "slack",
+          "plugin": "slack",
+          "displayName": "Slack",
+          "provider": "Slack",
+          "providerScope": "Third-party",
+          "category": "Communication",
+          "url": "https://slack.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "stripe",
+          "plugin": "stripe",
+          "displayName": "Stripe",
+          "provider": "Stripe",
+          "providerScope": "Third-party",
+          "category": "Finance",
+          "url": "https://stripe.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 7,
+          "allSkillFiles": 7,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "supabase",
+          "plugin": "supabase",
+          "displayName": "Supabase",
+          "provider": "Supabase",
+          "providerScope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://supabase.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 2,
+          "allSkillFiles": 2,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "superpowers",
+          "plugin": "superpowers",
+          "displayName": "Superpowers",
+          "provider": "Jesse Vincent",
+          "providerScope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://github.com/obra/superpowers",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 14,
+          "allSkillFiles": 14,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": true
+        },
+        {
+          "name": "teams",
+          "plugin": "teams",
+          "displayName": "Teams",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Communication",
+          "url": "https://www.microsoft.com/en-us/microsoft-teams/group-chat-software",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 0,
+          "allSkillFiles": 0,
+          "appReferences": 1,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "temporal",
+          "plugin": "temporal",
+          "displayName": "Temporal",
+          "provider": "Temporal",
+          "providerScope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://temporal.io/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 4,
+          "allSkillFiles": 4,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "test-android-apps",
+          "plugin": "test-android-apps",
+          "displayName": "Test Android Apps",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Developer Tools",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 2,
+          "allSkillFiles": 2,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 1,
+          "hasHooks": false
+        },
+        {
+          "name": "twilio-developer-kit",
+          "plugin": "twilio-developer-kit",
+          "displayName": "Twilio Developer Kit",
+          "provider": "Twilio",
+          "providerScope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://www.twilio.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 55,
+          "allSkillFiles": 55,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        },
+        {
+          "name": "vercel",
+          "plugin": "vercel",
+          "displayName": "Vercel",
+          "provider": "Vercel Labs",
+          "providerScope": "Third-party",
+          "category": "Developer Tools",
+          "url": "https://vercel.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 54,
+          "allSkillFiles": 54,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 11,
+          "agentFiles": 6,
+          "hasHooks": false
+        },
+        {
+          "name": "zoom",
+          "plugin": "zoom",
+          "displayName": "Zoom",
+          "provider": "Zoom",
+          "providerScope": "Third-party",
+          "category": "Communication",
+          "url": "https://zoom.us/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 27,
+          "allSkillFiles": 53,
+          "appReferences": 1,
+          "mcpServers": 1,
+          "commandFiles": 26,
+          "agentFiles": 3,
+          "hasHooks": false
+        },
+        {
+          "name": "zotero",
+          "plugin": "zotero",
+          "displayName": "Zotero",
+          "provider": "OpenAI",
+          "providerScope": "OpenAI",
+          "category": "Education & Research",
+          "url": "https://openai.com/",
+          "urlSource": "interface.websiteURL",
+          "skillEntrypoints": 1,
+          "allSkillFiles": 1,
+          "appReferences": 0,
+          "mcpServers": 0,
+          "commandFiles": 0,
+          "agentFiles": 0,
+          "hasHooks": false
+        }
+      ],
+      "packageLinks": {
+        "skills": [
+          {
+            "name": "twilio-developer-kit",
+            "displayName": "Twilio Developer Kit",
+            "provider": "Twilio",
+            "category": "Developer Tools",
+            "url": "https://www.twilio.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 55
+          },
+          {
+            "name": "vercel",
+            "displayName": "Vercel",
+            "provider": "Vercel Labs",
+            "category": "Developer Tools",
+            "url": "https://vercel.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 54
+          },
+          {
+            "name": "life-science-research",
+            "displayName": "Life Science Research",
+            "provider": "OpenAI",
+            "category": "Education & Research",
+            "url": "https://openai.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 50
+          },
+          {
+            "name": "zoom",
+            "displayName": "Zoom",
+            "provider": "Zoom",
+            "category": "Communication",
+            "url": "https://zoom.us/",
+            "urlSource": "interface.websiteURL",
+            "value": 27
+          },
+          {
+            "name": "public-equity-investing",
+            "displayName": "Public Equity Investing",
+            "provider": "OpenAI",
+            "category": "Finance",
+            "url": "https://openai.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 23
+          },
+          {
+            "name": "shopify",
+            "displayName": "Shopify",
+            "provider": "Shopify",
+            "category": "Business & Operations",
+            "url": "https://shopify.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 20
+          },
+          {
+            "name": "build-web-data-visualization",
+            "displayName": "Build Web Data Visualization",
+            "provider": "OpenAI",
+            "category": "Developer Tools",
+            "url": "https://openai.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 18
+          },
+          {
+            "name": "ngs-analysis",
+            "displayName": "Life Sciences NGS Analysis",
+            "provider": "OpenAI",
+            "category": "Education & Research",
+            "url": "https://openai.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 18
+          }
+        ],
+        "apps": [
+          {
+            "name": "data-analytics",
+            "displayName": "Data Analytics",
+            "provider": "OpenAI",
+            "category": "Data & Analytics",
+            "url": "https://openai.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 23
+          },
+          {
+            "name": "public-equity-investing",
+            "displayName": "Public Equity Investing",
+            "provider": "OpenAI",
+            "category": "Finance",
+            "url": "https://openai.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 15
+          },
+          {
+            "name": "codex-security",
+            "displayName": "Codex Security",
+            "provider": "OpenAI",
+            "category": "Security",
+            "url": "https://openai.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 4
+          },
+          {
+            "name": "github",
+            "displayName": "GitHub",
+            "provider": "OpenAI",
+            "category": "Developer Tools",
+            "url": "https://github.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 2
+          },
+          {
+            "name": "vercel",
+            "displayName": "Vercel",
+            "provider": "Vercel Labs",
+            "category": "Developer Tools",
+            "url": "https://vercel.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 1
+          },
+          {
+            "name": "zoom",
+            "displayName": "Zoom",
+            "provider": "Zoom",
+            "category": "Communication",
+            "url": "https://zoom.us/",
+            "urlSource": "interface.websiteURL",
+            "value": 1
+          },
+          {
+            "name": "shopify",
+            "displayName": "Shopify",
+            "provider": "Shopify",
+            "category": "Business & Operations",
+            "url": "https://shopify.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 1
+          },
+          {
+            "name": "figma",
+            "displayName": "Figma",
+            "provider": "Figma",
+            "category": "Creativity",
+            "url": "https://www.figma.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 1
+          }
+        ],
+        "mcp": [
+          {
+            "name": "vercel",
+            "displayName": "Vercel",
+            "provider": "Vercel Labs",
+            "category": "Developer Tools",
+            "url": "https://vercel.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 1
+          },
+          {
+            "name": "data-analytics",
+            "displayName": "Data Analytics",
+            "provider": "OpenAI",
+            "category": "Data & Analytics",
+            "url": "https://openai.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 1
+          },
+          {
+            "name": "zoom",
+            "displayName": "Zoom",
+            "provider": "Zoom",
+            "category": "Communication",
+            "url": "https://zoom.us/",
+            "urlSource": "interface.websiteURL",
+            "value": 1
+          },
+          {
+            "name": "shopify",
+            "displayName": "Shopify",
+            "provider": "Shopify",
+            "category": "Business & Operations",
+            "url": "https://shopify.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 1
+          },
+          {
+            "name": "codex-security",
+            "displayName": "Codex Security",
+            "provider": "OpenAI",
+            "category": "Security",
+            "url": "https://openai.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 1
+          },
+          {
+            "name": "figma",
+            "displayName": "Figma",
+            "provider": "Figma",
+            "category": "Creativity",
+            "url": "https://www.figma.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 1
+          },
+          {
+            "name": "build-ios-apps",
+            "displayName": "Build iOS Apps",
+            "provider": "OpenAI",
+            "category": "Developer Tools",
+            "url": "https://openai.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 1
+          },
+          {
+            "name": "canva",
+            "displayName": "Canva",
+            "provider": "Canva Pty Ltd.",
+            "category": "Creativity",
+            "url": "https://www.canva.com/",
+            "urlSource": "interface.websiteURL",
+            "value": 1
+          }
+        ]
+      },
+      "providerInsights": {
+        "scope": [
+          {
+            "name": "Third-party",
+            "count": 36
+          },
+          {
+            "name": "OpenAI",
+            "count": 26
+          }
+        ],
+        "distinctProviders": 37,
+        "metadataCoverage": {
+          "providerNamed": 62,
+          "urlLinked": 62,
+          "both": 62
+        },
+        "topProviders": [
+          {
+            "provider": "OpenAI",
+            "providerScope": "OpenAI",
+            "pluginCount": 26,
+            "categoryCount": 8,
+            "categories": [
+              "Communication",
+              "Creativity",
+              "Data & Analytics",
+              "Developer Tools",
+              "Education & Research",
+              "Finance",
+              "Productivity",
+              "Security"
+            ],
+            "url": null,
+            "urlCoverage": 12,
+            "samplePlugins": [
+              "build-ios-apps",
+              "build-macos-apps",
+              "build-web-apps"
+            ]
+          },
+          {
+            "provider": "Adobe Inc",
+            "providerScope": "Third-party",
+            "pluginCount": 1,
+            "categoryCount": 1,
+            "categories": [
+              "Creativity"
+            ],
+            "url": "https://www.adobe.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "adobe"
+            ]
+          },
+          {
+            "provider": "Airtable",
+            "providerScope": "Third-party",
+            "pluginCount": 1,
+            "categoryCount": 1,
+            "categories": [
+              "Productivity"
+            ],
+            "url": "https://airtable.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "airtable"
+            ]
+          },
+          {
+            "provider": "Atlassian",
+            "providerScope": "Third-party",
+            "pluginCount": 1,
+            "categoryCount": 1,
+            "categories": [
+              "Productivity"
+            ],
+            "url": "https://www.atlassian.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "atlassian-rovo"
+            ]
+          },
+          {
+            "provider": "Boltz",
+            "providerScope": "Third-party",
+            "pluginCount": 1,
+            "categoryCount": 1,
+            "categories": [
+              "Scientific Research"
+            ],
+            "url": "https://boltz.bio/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "boltz-api-cli"
+            ]
+          },
+          {
+            "provider": "Canva Pty Ltd.",
+            "providerScope": "Third-party",
+            "pluginCount": 1,
+            "categoryCount": 1,
+            "categories": [
+              "Creativity"
+            ],
+            "url": "https://www.canva.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "canva"
+            ]
+          },
+          {
+            "provider": "ChatCut",
+            "providerScope": "Third-party",
+            "pluginCount": 1,
+            "categoryCount": 1,
+            "categories": [
+              "Creativity"
+            ],
+            "url": "https://chatcut.io/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "chatcut"
+            ]
+          },
+          {
+            "provider": "CircleCI",
+            "providerScope": "Third-party",
+            "pluginCount": 1,
+            "categoryCount": 1,
+            "categories": [
+              "Developer Tools"
+            ],
+            "url": "https://circleci.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "circleci"
+            ]
+          },
+          {
+            "provider": "ClickUp",
+            "providerScope": "Third-party",
+            "pluginCount": 1,
+            "categoryCount": 1,
+            "categories": [
+              "Productivity"
+            ],
+            "url": "https://clickup.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "clickup"
+            ]
+          },
+          {
+            "provider": "Cloudflare",
+            "providerScope": "Third-party",
+            "pluginCount": 1,
+            "categoryCount": 1,
+            "categories": [
+              "Developer Tools"
+            ],
+            "url": "https://workers.cloudflare.com/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "cloudflare"
+            ]
+          },
+          {
+            "provider": "CodeRabbit",
+            "providerScope": "Third-party",
+            "pluginCount": 1,
+            "categoryCount": 1,
+            "categories": [
+              "Developer Tools"
+            ],
+            "url": "https://coderabbit.ai/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "coderabbit"
+            ]
+          },
+          {
+            "provider": "Consensus",
+            "providerScope": "Third-party",
+            "pluginCount": 1,
+            "categoryCount": 1,
+            "categories": [
+              "Education & Research"
+            ],
+            "url": "https://consensus.app/",
+            "urlCoverage": 1,
+            "samplePlugins": [
+              "consensus"
+            ]
+          }
+        ]
+      },
+      "components": {
+        "manifestDeclarations": {
+          "skills": 45,
+          "apps": 36,
+          "mcpServers": 8,
+          "hooks": 1
+        },
+        "physical": {
+          "pluginsWithSkillsDirectory": 46,
+          "immediateSkillEntrypoints": 501,
+          "allSkillMarkdown": 534,
+          "appFiles": 36,
+          "mcpFiles": 31,
+          "pluginsWithCommands": 6,
+          "commandFiles": 47,
+          "pluginsWithAgents": 12,
+          "agentFiles": 23,
+          "hookFiles": 1,
+          "lockFiles": 3
+        },
+        "appReferences": {
+          "total": 74,
+          "uniqueIds": 54,
+          "optional": 23,
+          "idPrefixes": [
+            {
+              "name": "connector",
+              "count": 36
+            },
+            {
+              "name": "asdk_app",
+              "count": 34
+            },
+            {
+              "name": "templated_apps",
+              "count": 4
+            }
+          ],
+          "categories": [
+            {
+              "name": "Unspecified",
+              "count": 47
+            },
+            {
+              "name": "Behavior signals",
+              "count": 4
+            },
+            {
+              "name": "Company docs",
+              "count": 3
+            },
+            {
+              "name": "Dashboards and BI",
+              "count": 3
+            },
+            {
+              "name": "Data warehouse",
+              "count": 3
+            },
+            {
+              "name": "Calendar context",
+              "count": 2
+            },
+            {
+              "name": "Email context",
+              "count": 2
+            },
+            {
+              "name": "Notebook lab",
+              "count": 2
+            },
+            {
+              "name": "Team communication",
+              "count": 2
+            },
+            {
+              "name": "Work Tracking & Coordination",
+              "count": 2
+            },
+            {
+              "name": "Application hosting",
+              "count": 1
+            },
+            {
+              "name": "Code Hosting & Security Findings",
+              "count": 1
+            },
+            {
+              "name": "Code repository",
+              "count": 1
+            },
+            {
+              "name": "Security",
+              "count": 1
+            }
+          ],
+          "providerScope": [
+            {
+              "name": "OpenAI",
+              "count": 52
+            },
+            {
+              "name": "Third-party",
+              "count": 22
+            }
+          ],
+          "providers": [
+            {
+              "name": "OpenAI",
+              "count": 52
+            },
+            {
+              "name": "Adobe Inc",
+              "count": 1
+            },
+            {
+              "name": "Airtable",
+              "count": 1
+            },
+            {
+              "name": "Atlassian",
+              "count": 1
+            },
+            {
+              "name": "Canva Pty Ltd.",
+              "count": 1
+            },
+            {
+              "name": "ClickUp",
+              "count": 1
+            },
+            {
+              "name": "Consensus",
+              "count": 1
+            },
+            {
+              "name": "Datadog",
+              "count": 1
+            },
+            {
+              "name": "Dropbox",
+              "count": 1
+            },
+            {
+              "name": "Figma",
+              "count": 1
+            },
+            {
+              "name": "Granola",
+              "count": 1
+            },
+            {
+              "name": "Higgsfield AI, Inc.",
+              "count": 1
+            },
+            {
+              "name": "Linear Orbit, Inc",
+              "count": 1
+            },
+            {
+              "name": "Lovable Labs",
+              "count": 1
+            },
+            {
+              "name": "monday.com",
+              "count": 1
+            },
+            {
+              "name": "Notion",
+              "count": 1
+            },
+            {
+              "name": "PostHog Inc.",
+              "count": 1
+            },
+            {
+              "name": "Shopify",
+              "count": 1
+            },
+            {
+              "name": "Slack",
+              "count": 1
+            },
+            {
+              "name": "Stripe",
+              "count": 1
+            },
+            {
+              "name": "Supabase",
+              "count": 1
+            },
+            {
+              "name": "Vercel Labs",
+              "count": 1
+            },
+            {
+              "name": "Zoom",
+              "count": 1
+            }
+          ]
+        },
+        "mcpServers": {
+          "total": 31,
+          "transports": [
+            {
+              "name": "http",
+              "count": 26
+            },
+            {
+              "name": "stdio",
+              "count": 5
+            }
+          ],
+          "oauthResource": 4
+        }
+      }
+    }
+  },
+  "managedCache": {
+    "available": true,
+    "marketplace": {
+      "name": "openai-curated",
+      "displayName": "Codex official",
+      "total": 180,
+      "categories": [
+        {
+          "name": "Developer Tools",
+          "count": 44
+        },
+        {
+          "name": "Productivity",
+          "count": 44
+        },
+        {
+          "name": "Finance",
+          "count": 27
+        },
+        {
+          "name": "Business & Operations",
+          "count": 15
+        },
+        {
+          "name": "Data & Analytics",
+          "count": 13
+        },
+        {
+          "name": "Communication",
+          "count": 12
+        },
+        {
+          "name": "Education & Research",
+          "count": 11
+        },
+        {
+          "name": "Creativity",
+          "count": 9
+        },
+        {
+          "name": "Other",
+          "count": 2
+        },
+        {
+          "name": "Travel",
+          "count": 2
+        },
+        {
+          "name": "Security",
+          "count": 1
+        }
+      ],
+      "authentication": [
+        {
+          "name": "ON_INSTALL",
+          "count": 177
+        },
+        {
+          "name": "ON_USE",
+          "count": 3
+        }
+      ],
+      "productScope": {
+        "codexOnly": 15,
+        "unrestricted": 165
+      },
+      "sourceTypes": [
+        {
+          "name": "local",
+          "count": 180
+        }
+      ],
+      "names": [
+        "actively",
+        "aiera",
+        "airtable",
+        "alation",
+        "alpaca",
+        "amplitude",
+        "apollo",
+        "asana",
+        "atlassian-rovo",
+        "attio",
+        "base44",
+        "binance",
+        "biorender",
+        "boltz-api-cli",
+        "box",
+        "brand24",
+        "brex",
+        "brighthire",
+        "build-ios-apps",
+        "build-macos-apps",
+        "build-web-apps",
+        "build-web-data-visualization",
+        "calendly",
+        "canva",
+        "carta-crm",
+        "catalyst-by-zoho",
+        "cb-insights",
+        "channel99",
+        "chronograph-gp",
+        "chronograph-lp",
+        "circleback",
+        "circleci",
+        "clay",
+        "clickup",
+        "close",
+        "cloudflare",
+        "cloudinary",
+        "coderabbit",
+        "codex-security",
+        "cogedim",
+        "common-room",
+        "conductor",
+        "convex",
+        "coupler-io",
+        "coveo",
+        "cube",
+        "daloopa",
+        "datadog",
+        "datasite",
+        "deepnote",
+        "demandbase",
+        "digitalocean",
+        "dnb-finance-analytics",
+        "docket",
+        "docusign",
+        "domotz-preview",
+        "dovetail",
+        "dow-jones-factiva",
+        "egnyte",
+        "expo",
+        "factset",
+        "fal",
+        "figma",
+        "finn",
+        "fireflies",
+        "fiscal-ai",
+        "fyxer",
+        "game-studio",
+        "github",
+        "glean",
+        "gmail",
+        "google-calendar",
+        "google-drive",
+        "govtribe",
+        "granola",
+        "happenstance",
+        "hebbia",
+        "help-scout",
+        "hex",
+        "heygen",
+        "hg-insights",
+        "highlevel",
+        "hostinger",
+        "hubspot",
+        "hugging-face",
+        "hyperframes",
+        "intercom",
+        "jam",
+        "keybid-puls",
+        "life-science-research",
+        "linear",
+        "lovable",
+        "lseg",
+        "magicpath",
+        "marcopolo",
+        "mem",
+        "meticulate",
+        "midpage",
+        "mixpanel",
+        "mixpanel-headless",
+        "monday-com",
+        "moody-s",
+        "morningstar",
+        "motherduck",
+        "mt-newswires",
+        "myregistry-com",
+        "neon-postgres",
+        "netlify",
+        "network-solutions",
+        "ngs-analysis",
+        "notion",
+        "nvidia",
+        "omni-analytics",
+        "openai-ads-conversions",
+        "openai-developers",
+        "otter-ai",
+        "outlook-calendar",
+        "outlook-email",
+        "outreach",
+        "particl-market-research",
+        "picsart",
+        "pipedrive",
+        "pitchbook",
+        "plugin-eval",
+        "policynote",
+        "posthog",
+        "pylon",
+        "quartr",
+        "quickbooks",
+        "quicknode",
+        "ranked-ai",
+        "razorpay",
+        "read-ai",
+        "readwise",
+        "remotion",
+        "render",
+        "replayio",
+        "replit",
+        "responsive",
+        "rox",
+        "s-p",
+        "scite",
+        "semrush",
+        "sendgrid",
+        "sentry",
+        "setu-bharat-connect-billpay",
+        "sharepoint",
+        "shopify",
+        "shutterstock",
+        "signnow",
+        "similarweb",
+        "skywatch",
+        "slack",
+        "statsig",
+        "streak",
+        "stripe",
+        "supabase",
+        "superhuman",
+        "superpowers",
+        "taxdown",
+        "teams",
+        "teamwork-com",
+        "temporal",
+        "test-android-apps",
+        "third-bridge",
+        "thoughtspot",
+        "tinman-ai",
+        "twilio-developer-kit",
+        "united-rentals",
+        "vantage",
+        "vercel",
+        "waldo",
+        "weatherpromise",
+        "windsor-ai",
+        "wix",
+        "yepcode",
+        "zoho",
+        "zoom",
+        "zoominfo",
+        "zotero"
+      ]
+    },
+    "sha": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+    "git": {
+      "head": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+      "originMain": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+      "committedAt": "2026-07-13T15:38:40-04:00",
+      "subject": "Add ClickUp website URL (#384)",
+      "branchStatus": "## main...origin/main",
+      "clean": true,
+      "ahead": 0,
+      "behind": 0
+    },
+    "shaMatchesHead": true
+  },
+  "ptyObservation": {
+    "capturedOn": "2026-08-28",
+    "command": "/plugins",
+    "cliVersion": "codex-cli 0.150.1",
+    "available": 3312,
+    "mutation": "none",
+    "matchesProjection": true
+  },
+  "reconciliations": {
+    "cliMarketplaceTotal": 195,
+    "tuiCategoryTotal": 3312,
+    "repositoryCategoryTotal": 62,
+    "apiCategoryTotal": 46
+  }
+}

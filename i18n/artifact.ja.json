@@ -1,0 +1,2923 @@
+{
+  "surface": "dashboard",
+  "manifest": {
+    "version": 1,
+    "surface": "dashboard",
+    "title": "Codex | ChatGPT プラグイン索引",
+    "description": "Skills / Plugins / Apps パッケージ市場データ分析 — 再現可能なメタデータ基盤の市場索引。",
+    "generatedAt": "2026-08-28T04:36:36.273Z",
+    "cards": [
+      {
+        "id": "universal_catalog",
+        "description": "TUI が CLI 専用 bundled を除外した後の、ユーザー表示用 /plugins ディレクトリ。",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◉ ユニバーサルディレクトリ",
+            "field": "universal_plugins",
+            "format": "number"
+          },
+          {
+            "label": "App Server 生データ",
+            "field": "raw_plugins",
+            "format": "number"
+          },
+          {
+            "label": "非表示 bundled 行",
+            "field": "hidden_bundled",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "cli_snapshot",
+        "description": "プラグイン CLI コマンドに表示される設定済みマーケットカタログ行。",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◇ CLI カタログ行",
+            "field": "cli_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "git_marketplace",
+        "description": "標準 curated マーケットプレイスと API-key 互換サブセット。",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◆ Git マーケットプレイス",
+            "field": "repo_plugins",
+            "format": "number"
+          },
+          {
+            "label": "API-key サブセット",
+            "field": "api_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "skills_surface",
+        "description": "skills ディレクトリを持つプラグインの直接再利用可能な Skill エントリポイント。",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "▦ Skill エントリポイント",
+            "field": "skill_entrypoints",
+            "format": "number"
+          },
+          {
+            "label": "Skills を含むプラグイン",
+            "field": "plugins_with_skills",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "apps_surface",
+        "description": "公式 Git マーケットプレイスパッケージが宣言する App 参照と一意の App ID。",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◌ 一意の App ID",
+            "field": "unique_app_ids",
+            "format": "number"
+          },
+          {
+            "label": "App 参照",
+            "field": "app_references_total",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "projection_delta",
+        "description": "App Server 生カタログから TUI 表示市場ビューへの正確な調整。",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "↔ 非表示 bundled 行",
+            "field": "hidden_bundled",
+            "format": "number"
+          },
+          {
+            "label": "App Server 生データ",
+            "field": "raw_plugins",
+            "format": "number"
+          },
+          {
+            "label": "PTY 表示",
+            "field": "universal_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "live_concentration",
+        "description": "ライブカタログにおける生産性とビジネス＆運用の比率。",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◉ 上位2カテゴリ比率",
+            "field": "top_two_category_share",
+            "format": "percent"
+          },
+          {
+            "label": "生産性",
+            "field": "productivity_plugins",
+            "format": "number"
+          },
+          {
+            "label": "ビジネス＆運用",
+            "field": "business_ops_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "git_developer_mix",
+        "description": "標準 openai/plugins マーケットプレイスにおける開発者ツールの比率。",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◆ Developer Tools 比率",
+            "field": "git_developer_share",
+            "format": "percent"
+          },
+          {
+            "label": "開発者ツール",
+            "field": "git_developer_plugins",
+            "format": "number"
+          },
+          {
+            "label": "Git マーケットプレイス",
+            "field": "repo_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "api_coverage",
+        "description": "API-key サブセットによる標準 Git マーケットプレイスの名前単位カバレッジ。",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "⌁ API-key カバレッジ",
+            "field": "api_coverage",
+            "format": "percent"
+          },
+          {
+            "label": "API-key サブセット",
+            "field": "api_plugins",
+            "format": "number"
+          },
+          {
+            "label": "標準",
+            "field": "repo_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "third_party_catalog",
+        "description": "明示された非 OpenAI 開発プロバイダーを持つユニバーサルディレクトリのプラグイン。",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◎ サードパーティ比率",
+            "field": "third_party_share",
+            "format": "percent"
+          },
+          {
+            "label": "サードパーティプラグイン",
+            "field": "third_party_plugins",
+            "format": "number"
+          },
+          {
+            "label": "ユニバーサルディレクトリ",
+            "field": "universal_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "provider_breadth",
+        "description": "ライブカタログ内の名前付きサードパーティ開発プロバイダーの重複除外数。",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◎ サードパーティプロバイダー",
+            "field": "distinct_third_party_providers",
+            "format": "number"
+          },
+          {
+            "label": "サードパーティプラグイン",
+            "field": "third_party_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "provider_url_coverage",
+        "description": "正確なメタデータ Web サイト URL を持つユニバーサルディレクトリ行。",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "↗ Webサイトカバレッジ",
+            "field": "provider_website_coverage",
+            "format": "percent"
+          },
+          {
+            "label": "リンク付き行",
+            "field": "provider_website_linked",
+            "format": "number"
+          },
+          {
+            "label": "ユニバーサルディレクトリ",
+            "field": "universal_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "git_provider_mix",
+        "description": "マニフェストの developer/author が非 OpenAI の公式 Git パッケージ。",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◆ Git サードパーティ比率",
+            "field": "git_third_party_share",
+            "format": "percent"
+          },
+          {
+            "label": "サードパーティパッケージ",
+            "field": "git_third_party_packages",
+            "format": "number"
+          },
+          {
+            "label": "Git マーケットプレイス",
+            "field": "repo_plugins",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "app_provider_mix",
+        "description": "サードパーティパッケージプロバイダーによる Git .app.json 参照。",
+        "dataset": "summary",
+        "sourceId": "summary_sql",
+        "metrics": [
+          {
+            "label": "◌ サードパーティ App 参照",
+            "field": "third_party_app_share",
+            "format": "percent"
+          },
+          {
+            "label": "サードパーティ参照",
+            "field": "third_party_app_references",
+            "format": "number"
+          },
+          {
+            "label": "全 App 参照",
+            "field": "app_references_total",
+            "format": "number"
+          }
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "id": "inventory_planes_chart",
+        "question": "市場ソース別プラグインインベントリ",
+        "intent": "comparison",
+        "rationale": "Five named market sources and one magnitude measure fit a horizontal comparison bar.",
+        "title": "市場ソース別プラグインインベントリ",
+        "subtitle": "異なる5つの市場ソースとカタログ表示。正確な出所と鮮度はツールチップとデータソースに保持されます。",
+        "type": "horizontalBar",
+        "dataset": "inventory_planes",
+        "sourceId": "inventory_planes_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "plane",
+            "type": "nominal",
+            "label": "市場ソース / カタログ表示"
+          },
+          "y": {
+            "field": "total",
+            "type": "quantitative",
+            "label": "行",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "total",
+              "type": "quantitative",
+              "label": "行",
+              "format": "number"
+            },
+            {
+              "field": "source",
+              "type": "nominal",
+              "label": "Source"
+            },
+            {
+              "field": "freshness",
+              "type": "nominal",
+              "label": "Freshness"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tui_categories_chart",
+        "question": "ユニバーサルディレクトリのカテゴリ分布",
+        "intent": "comparison",
+        "rationale": "Fourteen long category labels need sorted horizontal bars for direct magnitude comparison.",
+        "title": "ユニバーサルディレクトリのカテゴリ分布",
+        "subtitle": "2026-08-28 時点の TUI 表示 3,312 件。カテゴリは相互排他的です。",
+        "type": "horizontalBar",
+        "dataset": "tui_categories",
+        "sourceId": "tui_categories_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "category",
+            "type": "nominal",
+            "label": "カテゴリ"
+          },
+          "y": {
+            "field": "count",
+            "type": "quantitative",
+            "label": "件数",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "count",
+              "type": "quantitative",
+              "label": "件数",
+              "format": "number"
+            },
+            {
+              "field": "share",
+              "type": "quantitative",
+              "label": "Share",
+              "format": "percent"
+            },
+            {
+              "field": "rank",
+              "type": "quantitative",
+              "label": "Rank",
+              "format": "number"
+            }
+          ]
+        }
+      },
+      {
+        "id": "third_party_categories_chart",
+        "question": "サードパーティプラグインのカテゴリ分布",
+        "intent": "comparison",
+        "rationale": "Fourteen categories with long labels and one comparable package count fit a horizontal bar.",
+        "title": "サードパーティプラグインのカテゴリ分布",
+        "subtitle": "2,857 の名前付きサードパーティプロバイダーにまたがる 3,259 プラグイン。",
+        "type": "horizontalBar",
+        "dataset": "third_party_categories",
+        "sourceId": "third_party_categories_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "category",
+            "type": "nominal",
+            "label": "カテゴリ"
+          },
+          "y": {
+            "field": "plugin_count",
+            "type": "quantitative",
+            "label": "サードパーティプラグイン",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "plugin_count",
+              "type": "quantitative",
+              "label": "サードパーティプラグイン",
+              "format": "number"
+            },
+            {
+              "field": "provider_count",
+              "type": "quantitative",
+              "label": "Providers",
+              "format": "number"
+            },
+            {
+              "field": "share",
+              "type": "quantitative",
+              "label": "サードパーティ比率",
+              "format": "percent"
+            }
+          ]
+        }
+      },
+      {
+        "id": "top_third_party_providers_chart",
+        "question": "プラグイン数上位のサードパーティプロバイダー",
+        "intent": "comparison",
+        "rationale": "Eight provider names and one count measure fit a bounded horizontal ranking.",
+        "title": "プラグイン数上位のサードパーティプロバイダー",
+        "subtitle": "上位8件に限定。プロバイダー識別情報と URL はカタログメタデータから直接取得。",
+        "type": "horizontalBar",
+        "dataset": "top_third_party_providers",
+        "sourceId": "top_third_party_providers_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "provider",
+            "type": "nominal",
+            "label": "プロバイダー"
+          },
+          "y": {
+            "field": "plugin_count",
+            "type": "quantitative",
+            "label": "プラグイン",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "plugin_count",
+              "type": "quantitative",
+              "label": "プラグイン",
+              "format": "number"
+            },
+            {
+              "field": "category_count",
+              "type": "quantitative",
+              "label": "Categories",
+              "format": "number"
+            },
+            {
+              "field": "sample_plugins",
+              "type": "nominal",
+              "label": "例"
+            },
+            {
+              "field": "url",
+              "type": "nominal",
+              "label": "メタデータ URL"
+            }
+          ]
+        }
+      },
+      {
+        "id": "category_positioning_chart",
+        "question": "ユニバーサルディレクトリと Git マーケットプレイスでカテゴリの重点はどう異なるか？",
+        "intent": "relationship",
+        "rationale": "Fourteen same-grain category observations support a labeled scatter; both axes are shares with explicit denominators.",
+        "title": "カテゴリ比率：ユニバーサル vs Git",
+        "subtitle": "ラベル付き14カテゴリ · x = TUI 3,312 行の比率 · y = Git 62 パッケージの比率",
+        "type": "scatter",
+        "dataset": "category_positioning",
+        "sourceId": "category_positioning_sql",
+        "valueFormat": "percent",
+        "xAxisTitle": "ユニバーサルディレクトリ比率",
+        "yAxisTitle": "Git マーケットプレイス比率",
+        "maxRows": 14,
+        "palette": {
+          "kind": "categorical",
+          "name": "openai-semantic"
+        },
+        "legend": {
+          "position": "bottom",
+          "title": "相対的な重点"
+        },
+        "comparisonContext": {
+          "grain": "category",
+          "denominator": "TUI 表示 3312 行 vs Git 62 パッケージ",
+          "unit": "比率"
+        },
+        "encodings": {
+          "x": {
+            "field": "universal_share",
+            "type": "quantitative",
+            "label": "ユニバーサル比率",
+            "format": "percent"
+          },
+          "y": {
+            "field": "git_share",
+            "type": "quantitative",
+            "label": "Git 比率",
+            "format": "percent"
+          },
+          "color": {
+            "field": "relative_emphasis",
+            "type": "nominal",
+            "label": "相対的な重点"
+          },
+          "label": {
+            "field": "category",
+            "type": "nominal",
+            "label": "カテゴリ"
+          },
+          "tooltip": [
+            {
+              "field": "category",
+              "type": "nominal",
+              "label": "カテゴリ"
+            },
+            {
+              "field": "universal_count",
+              "type": "quantitative",
+              "label": "ユニバーサル件数",
+              "format": "number"
+            },
+            {
+              "field": "universal_share",
+              "type": "quantitative",
+              "label": "ユニバーサル比率",
+              "format": "percent"
+            },
+            {
+              "field": "git_count",
+              "type": "quantitative",
+              "label": "Git 件数",
+              "format": "number"
+            },
+            {
+              "field": "git_share",
+              "type": "quantitative",
+              "label": "Git 比率",
+              "format": "percent"
+            },
+            {
+              "field": "share_delta",
+              "type": "quantitative",
+              "label": "Git − ユニバーサル",
+              "format": "percent"
+            }
+          ]
+        }
+      },
+      {
+        "id": "cli_marketplaces_chart",
+        "question": "設定済みマーケット別 CLI カタログ行",
+        "intent": "comparison",
+        "rationale": "Three catalog sources with one comparable count fit a compact horizontal bar.",
+        "title": "設定済みマーケット別 CLI カタログ行",
+        "subtitle": "195 カタログ行。managed curated ソースのリビジョンは 11c74d6b。",
+        "type": "horizontalBar",
+        "dataset": "cli_marketplaces",
+        "sourceId": "cli_marketplaces_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "marketplace",
+            "type": "nominal",
+            "label": "マーケットプレイス"
+          },
+          "y": {
+            "field": "total",
+            "type": "quantitative",
+            "label": "行",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "total",
+              "type": "quantitative",
+              "label": "行",
+              "format": "number"
+            }
+          ]
+        }
+      },
+      {
+        "id": "component_counts_chart",
+        "question": "プラグインパッケージ面の件数",
+        "intent": "comparison",
+        "rationale": "Seven named package surfaces fit a high-contrast horizontal comparison with a shared zero baseline.",
+        "title": "プラグインパッケージ面の件数",
+        "subtitle": "件数は重複可能なインベントリであり、全体の排他的な構成要素ではありません。",
+        "type": "horizontalBar",
+        "dataset": "component_counts_chart",
+        "sourceId": "component_counts_chart_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "component",
+            "type": "nominal",
+            "label": "パッケージ面"
+          },
+          "y": {
+            "field": "count",
+            "type": "quantitative",
+            "label": "件数",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "count",
+              "type": "quantitative",
+              "label": "件数",
+              "format": "number"
+            }
+          ]
+        }
+      },
+      {
+        "id": "package_capability_chart",
+        "question": "能力構成別パッケージアーキテクチャ",
+        "intent": "comparison",
+        "rationale": "相互排他的なアーキタイプ分布により、62個のパッケージ点を重ねずに構成を読み取れます。",
+        "title": "能力構成別パッケージアーキテクチャ",
+        "subtitle": "62 パッケージ · 相互排他的な6つの Skills / Apps / MCP アーキタイプ · Git 6d99ee14",
+        "type": "horizontalBar",
+        "dataset": "package_archetypes",
+        "sourceId": "package_archetypes_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "architecture",
+            "type": "nominal",
+            "label": "能力アーキタイプ"
+          },
+          "y": {
+            "field": "package_count",
+            "type": "quantitative",
+            "label": "パッケージ",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "package_count",
+              "type": "quantitative",
+              "label": "パッケージ",
+              "format": "number"
+            },
+            {
+              "field": "share",
+              "type": "quantitative",
+              "label": "マーケットプレイス比率",
+              "format": "percent"
+            },
+            {
+              "field": "openai_packages",
+              "type": "quantitative",
+              "label": "OpenAI パッケージ",
+              "format": "number"
+            },
+            {
+              "field": "third_party_packages",
+              "type": "quantitative",
+              "label": "サードパーティパッケージ",
+              "format": "number"
+            },
+            {
+              "field": "skill_entrypoints",
+              "type": "quantitative",
+              "label": "Skill エントリポイント",
+              "format": "number"
+            },
+            {
+              "field": "app_references",
+              "type": "quantitative",
+              "label": "App 参照",
+              "format": "number"
+            },
+            {
+              "field": "mcp_servers",
+              "type": "quantitative",
+              "label": "MCP 設定",
+              "format": "number"
+            },
+            {
+              "field": "examples",
+              "type": "nominal",
+              "label": "例"
+            }
+          ]
+        }
+      },
+      {
+        "id": "interfaces_chart",
+        "question": "Codex プラグインのインターフェース層",
+        "intent": "comparison",
+        "rationale": "Six named interface families fit a high-contrast horizontal comparison with a shared zero baseline.",
+        "title": "Codex プラグインのインターフェース層",
+        "subtitle": "CLI、TUI、リクエスト、通知の6層。正確なメソッドはソースデータプレビューで確認できます。",
+        "type": "horizontalBar",
+        "dataset": "interfaces",
+        "sourceId": "interfaces_sql",
+        "valueFormat": "number",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "auto"
+        },
+        "encodings": {
+          "x": {
+            "field": "layer",
+            "type": "nominal",
+            "label": "インターフェース層"
+          },
+          "y": {
+            "field": "count",
+            "type": "quantitative",
+            "label": "メソッド / コマンド",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "count",
+              "type": "quantitative",
+              "label": "メソッド / コマンド",
+              "format": "number"
+            },
+            {
+              "field": "examples",
+              "type": "nominal",
+              "label": "メソッド / コマンド"
+            }
+          ]
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "api_exclusions_table",
+        "title": "API-key サブセットから除外された標準市場項目",
+        "subtitle": "Git 6d99ee14 における名前単位の除外 16 件。",
+        "dataset": "api_exclusions",
+        "sourceId": "api_exclusions_sql",
+        "defaultSort": {
+          "field": "plugin",
+          "direction": "asc"
+        },
+        "density": "dense",
+        "layout": "full",
+        "columns": [
+          {
+            "field": "plugin",
+            "label": "プラグイン",
+            "type": "text"
+          },
+          {
+            "field": "standardMarketplace",
+            "label": "標準",
+            "type": "text"
+          },
+          {
+            "field": "apiKeyMarketplace",
+            "label": "API key",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "summary_sql",
+        "label": "監査主要指標",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "inventory_planes_sql",
+        "label": "市場ソース照合",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "tui_categories_sql",
+        "label": "TUI 表示プラグインカテゴリ",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "third_party_categories_sql",
+        "label": "サードパーティプロバイダーカテゴリ",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "top_third_party_providers_sql",
+        "label": "上位サードパーティプロバイダー",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "category_positioning_sql",
+        "label": "市場間カテゴリポジショニング",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "cli_marketplaces_sql",
+        "label": "CLI マーケットカタログ行",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "component_counts_chart_sql",
+        "label": "プラグインパッケージ面比較",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "package_index_sql",
+        "label": "公式 Git パッケージ能力索引",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "package_archetypes_sql",
+        "label": "パッケージ能力アーキタイプ",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "interfaces_sql",
+        "label": "Codex プラグインインターフェース一覧",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "api_exclusions_sql",
+        "label": "API-key マーケットプレイス除外",
+        "path": "queries/dashboard.sql"
+      },
+      {
+        "id": "pty_observation",
+        "label": "Codex PTY /plugins 直接観測",
+        "path": "evidence/pty-observation.json"
+      },
+      {
+        "id": "official_docs",
+        "label": "OpenAI 公式プラグイン文書",
+        "href": "https://learn.chatgpt.com/docs/plugins"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "hero_metrics",
+        "type": "metric-strip",
+        "cardIds": [
+          "universal_catalog",
+          "cli_snapshot",
+          "git_marketplace",
+          "skills_surface",
+          "apps_surface"
+        ]
+      },
+      {
+        "id": "technical_summary",
+        "type": "markdown",
+        "body": "## Skills / Plugins / Apps パッケージ市場データ分析\n\n`索引範囲` Universal、CLI、Git、Apps は異なる分母を使用します。指標カードをクリックすると SQL と確認済みデータを表示します。"
+      },
+      {
+        "id": "inventory_planes",
+        "type": "chart",
+        "chartId": "inventory_planes_chart",
+        "layout": "full"
+      },
+      {
+        "id": "audit_highlights",
+        "type": "metric-strip",
+        "cardIds": [
+          "projection_delta",
+          "live_concentration",
+          "git_developer_mix",
+          "api_coverage"
+        ]
+      },
+      {
+        "id": "cli_marketplaces_intro",
+        "type": "markdown",
+        "sourceId": "cli_marketplaces_sql",
+        "body": "## ◇ CLI カタログソース\n\n`カタログ構成` **180 / 195** 行は managed curated 由来で、bundled と primary runtime は補助ソースです。"
+      },
+      {
+        "id": "cli_marketplaces",
+        "type": "chart",
+        "chartId": "cli_marketplaces_chart"
+      },
+      {
+        "id": "universal_categories_intro",
+        "type": "markdown",
+        "sourceId": "tui_categories_sql",
+        "body": "## ◉ ライブ構成\n\n`カタログ構成` **39.7%** 生産性 + ビジネス＆運用に集中し、残りは12カテゴリに分布します。"
+      },
+      {
+        "id": "universal_categories",
+        "type": "chart",
+        "chartId": "tui_categories_chart"
+      },
+      {
+        "id": "provider_summary",
+        "type": "markdown",
+        "body": "## ◎ プロバイダーエコシステム\n\n`メタデータカバレッジ` **3,259 サードパーティプラグイン · 2,857 プロバイダー · 96.5% Webサイトリンク付き。**"
+      },
+      {
+        "id": "provider_metrics",
+        "type": "metric-strip",
+        "cardIds": [
+          "third_party_catalog",
+          "provider_breadth",
+          "provider_url_coverage",
+          "git_provider_mix",
+          "app_provider_mix"
+        ]
+      },
+      {
+        "id": "third_party_categories_intro",
+        "type": "markdown",
+        "sourceId": "third_party_categories_sql",
+        "body": "## ◎ サードパーティのカテゴリ幅\n\n`カテゴリ × プロバイダー` 生産性はパッケージ数、ビジネス＆運用は一意プロバイダーの広がりで首位です。"
+      },
+      {
+        "id": "third_party_categories",
+        "type": "chart",
+        "chartId": "third_party_categories_chart"
+      },
+      {
+        "id": "top_providers_intro",
+        "type": "markdown",
+        "sourceId": "top_third_party_providers_sql",
+        "body": "## ↗ プロバイダー集中度\n\n`上位 8` 最大手の名前付きプロバイダーでも2,857のサードパーティ全体では小さく、カタログは高度に分散しています。"
+      },
+      {
+        "id": "top_providers",
+        "type": "chart",
+        "chartId": "top_third_party_providers_chart"
+      },
+      {
+        "id": "provider_links",
+        "type": "markdown",
+        "sourceId": "top_third_party_providers_sql",
+        "body": "### ↗ プロバイダーメタデータリンク\n\n`プロバイダー` [Widget · 35](https://www.widget.olutely.com/) · [Spheric Admin Ltd · 29](https://www.widget.olutely.com/) · [Rohas Nagpal · 25](https://github.com/rohasnagpal/legal-ai-skills) · [Yaps AI · 12](https://www.yaps.ai/codex?utm_source=codex&utm_medium=plugin&utm_campaign=official_plugins) · [Layer 3 Labs · 10](https://www.layer3labs.io/) · [Windsor.ai · 5](https://windsor.ai/)"
+      },
+      {
+        "id": "repo_categories_intro",
+        "type": "markdown",
+        "sourceId": "category_positioning_sql",
+        "body": "## ◆ 市場間の重点\n\n`カテゴリ配置` Developer Tools は Git で高比率、ビジネス・金融・旅行はユニバーサルで高比率です。"
+      },
+      {
+        "id": "repo_categories",
+        "type": "chart",
+        "chartId": "category_positioning_chart"
+      },
+      {
+        "id": "components_intro",
+        "type": "markdown",
+        "sourceId": "component_counts_chart_sql",
+        "body": "## ▦ ケイパビリティ面\n\n`パッケージ構成` **501 Skills · 74 App 参照 · 31 MCP · 47 コマンド · 23 Agents。** 各能力は重複します。"
+      },
+      {
+        "id": "component_counts",
+        "type": "chart",
+        "chartId": "component_counts_chart"
+      },
+      {
+        "id": "package_architecture_intro",
+        "type": "markdown",
+        "sourceId": "package_archetypes_sql",
+        "body": "## ▦ パッケージ能力アーキタイプ\n\n`アーキテクチャ構成` **24 Skills のみ · 16 Skills + Apps + MCP · 11 Apps + MCP.** これらの合計は 82.3% のパッケージを占めます。"
+      },
+      {
+        "id": "package_architecture",
+        "type": "chart",
+        "chartId": "package_capability_chart"
+      },
+      {
+        "id": "package_links",
+        "type": "markdown",
+        "sourceId": "package_index_sql",
+        "body": "### ↗ パッケージメタデータリンク\n\n`SKILLS` [Twilio Developer Kit · 55](https://www.twilio.com/) · [Vercel · 54](https://vercel.com/) · [Life Science Research · 50](https://openai.com/)\n\n`APPS` [Data Analytics · 23](https://openai.com/) · [Public Equity Investing · 15](https://openai.com/) · [Codex Security · 4](https://openai.com/)\n\n`MCP` [Vercel · 1](https://vercel.com/) · [Data Analytics · 1](https://openai.com/) · [Zoom · 1](https://zoom.us/)"
+      },
+      {
+        "id": "interfaces_intro",
+        "type": "markdown",
+        "sourceId": "interfaces_sql",
+        "body": "## ⌘ インターフェースマップ\n\n`インターフェース面` **7 CLI · 1 TUI · 18 RPC · 1 通知。**"
+      },
+      {
+        "id": "interfaces",
+        "type": "chart",
+        "chartId": "interfaces_chart",
+        "layout": "full"
+      },
+      {
+        "id": "pty_projection_intro",
+        "type": "markdown",
+        "sourceId": "inventory_planes_sql",
+        "body": "## ↔ PTY 市場ソースフィルター\n\n`ディレクトリフィルター` **3,322 App Server 生行 → −10 CLI 専用 bundled 行 → 3,312 ユーザー表示行。**"
+      },
+      {
+        "id": "apps_and_api",
+        "type": "markdown",
+        "body": "## ◌ Apps / API スコープ\n\n`APP パッケージ` **74 参照 · 54 一意 ID · 22 サードパーティ参照。** `API サブセット` **46 / 62 (74.2%).**"
+      },
+      {
+        "id": "api_exclusions",
+        "type": "table",
+        "tableId": "api_exclusions_table",
+        "layout": "full"
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-08-28T04:36:36.273Z",
+    "status": "ready",
+    "datasets": {
+      "summary": [
+        {
+          "universal_plugins": 3312,
+          "raw_plugins": 3322,
+          "hidden_bundled": 10,
+          "cli_plugins": 195,
+          "repo_plugins": 62,
+          "api_plugins": 46,
+          "api_coverage": 0.7419354838709677,
+          "productivity_plugins": 691,
+          "business_ops_plugins": 623,
+          "top_two_category_share": 0.3967391304347826,
+          "git_developer_plugins": 24,
+          "git_developer_share": 0.3870967741935484,
+          "skill_entrypoints": 501,
+          "plugins_with_skills": 46,
+          "app_references_total": 74,
+          "unique_app_ids": 54,
+          "third_party_plugins": 3259,
+          "third_party_share": 0.9839975845410628,
+          "distinct_third_party_providers": 2857,
+          "provider_website_linked": 3195,
+          "provider_website_coverage": 0.9646739130434783,
+          "git_third_party_packages": 36,
+          "git_third_party_share": 0.5806451612903226,
+          "third_party_app_references": 22,
+          "third_party_app_share": 0.2972972972972973,
+          "git_url_coverage": 1
+        }
+      ],
+      "inventory_planes": [
+        {
+          "plane": "App Server 生デフォルト",
+          "source": "Remote + primary runtime + CLI-only bundled",
+          "total": 3322,
+          "freshness": "Live, before TUI filtering"
+        },
+        {
+          "plane": "PTY ユニバーサルディレクトリ",
+          "source": "OpenAI curated remote + primary runtime",
+          "total": 3312,
+          "freshness": "Live App Server catalog view, PTY verified"
+        },
+        {
+          "plane": "CLI マーケットプレイスカタログ",
+          "source": "openai-primary-runtime, openai-bundled, openai-curated",
+          "total": 195,
+          "freshness": "Catalog snapshot; curated source 11c74d6b"
+        },
+        {
+          "plane": "公式 Git マーケットプレイス",
+          "source": "openai/plugins marketplace.json",
+          "total": 62,
+          "freshness": "Git 6d99ee14"
+        },
+        {
+          "plane": "API-key Git マーケットプレイス",
+          "source": "openai/plugins api_marketplace.json",
+          "total": 46,
+          "freshness": "Git 6d99ee14"
+        }
+      ],
+      "tui_categories": [
+        {
+          "category": "生産性",
+          "count": 691,
+          "rank": 1,
+          "share": 0.2086352657004831
+        },
+        {
+          "category": "ビジネス＆運用",
+          "count": 623,
+          "rank": 2,
+          "share": 0.18810386473429952
+        },
+        {
+          "category": "その他",
+          "count": 439,
+          "rank": 3,
+          "share": 0.13254830917874397
+        },
+        {
+          "category": "金融",
+          "count": 337,
+          "rank": 4,
+          "share": 0.10175120772946859
+        },
+        {
+          "category": "旅行",
+          "count": 268,
+          "rank": 5,
+          "share": 0.08091787439613526
+        },
+        {
+          "category": "開発者ツール",
+          "count": 267,
+          "rank": 6,
+          "share": 0.0806159420289855
+        },
+        {
+          "category": "教育・研究",
+          "count": 179,
+          "rank": 7,
+          "share": 0.05404589371980676
+        },
+        {
+          "category": "データ＆分析",
+          "count": 137,
+          "rank": 8,
+          "share": 0.04136473429951691
+        },
+        {
+          "category": "クリエイティブ",
+          "count": 126,
+          "rank": 9,
+          "share": 0.03804347826086957
+        },
+        {
+          "category": "エンターテインメント",
+          "count": 111,
+          "rank": 10,
+          "share": 0.03351449275362319
+        },
+        {
+          "category": "ヘルスケア",
+          "count": 75,
+          "rank": 11,
+          "share": 0.022644927536231884
+        },
+        {
+          "category": "コミュニケーション",
+          "count": 26,
+          "rank": 12,
+          "share": 0.00785024154589372
+        },
+        {
+          "category": "セキュリティ",
+          "count": 26,
+          "rank": 13,
+          "share": 0.00785024154589372
+        },
+        {
+          "category": "科学研究",
+          "count": 7,
+          "rank": 14,
+          "share": 0.002113526570048309
+        }
+      ],
+      "third_party_categories": [
+        {
+          "category": "生産性",
+          "plugin_count": 673,
+          "provider_count": 571,
+          "share": 0.2065050629027309
+        },
+        {
+          "category": "ビジネス＆運用",
+          "plugin_count": 618,
+          "provider_count": 585,
+          "share": 0.18962872046640072
+        },
+        {
+          "category": "その他",
+          "plugin_count": 439,
+          "provider_count": 399,
+          "share": 0.13470389690088985
+        },
+        {
+          "category": "金融",
+          "plugin_count": 334,
+          "provider_count": 314,
+          "share": 0.1024854249769868
+        },
+        {
+          "category": "旅行",
+          "plugin_count": 268,
+          "provider_count": 252,
+          "share": 0.08223381405339061
+        },
+        {
+          "category": "開発者ツール",
+          "plugin_count": 253,
+          "provider_count": 231,
+          "share": 0.07763117520711875
+        },
+        {
+          "category": "教育・研究",
+          "plugin_count": 176,
+          "provider_count": 166,
+          "share": 0.05400429579625652
+        },
+        {
+          "category": "データ＆分析",
+          "plugin_count": 133,
+          "provider_count": 132,
+          "share": 0.04081006443694385
+        },
+        {
+          "category": "クリエイティブ",
+          "plugin_count": 124,
+          "provider_count": 110,
+          "share": 0.03804848112918073
+        },
+        {
+          "category": "エンターテインメント",
+          "plugin_count": 111,
+          "provider_count": 89,
+          "share": 0.03405952746241178
+        },
+        {
+          "category": "ヘルスケア",
+          "plugin_count": 75,
+          "provider_count": 69,
+          "share": 0.023013194231359314
+        },
+        {
+          "category": "セキュリティ",
+          "plugin_count": 25,
+          "provider_count": 24,
+          "share": 0.007671064743786438
+        },
+        {
+          "category": "コミュニケーション",
+          "plugin_count": 23,
+          "provider_count": 23,
+          "share": 0.007057379564283523
+        },
+        {
+          "category": "科学研究",
+          "plugin_count": 7,
+          "provider_count": 7,
+          "share": 0.0021478981282602025
+        }
+      ],
+      "top_third_party_providers": [
+        {
+          "provider": "Widget",
+          "plugin_count": 35,
+          "category_count": 10,
+          "url": "https://www.widget.olutely.com/",
+          "sample_plugins": "All your Horoscopes, Football- Games+results+scores, A-Z Holy Bible"
+        },
+        {
+          "provider": "Spheric Admin Ltd",
+          "plugin_count": 29,
+          "category_count": 7,
+          "url": "https://www.widget.olutely.com/",
+          "sample_plugins": "Smart Chess:Train+Learn to win, Appy Coupons, AnyWhereMap - Navigate+Locate"
+        },
+        {
+          "provider": "Rohas Nagpal",
+          "plugin_count": 25,
+          "category_count": 1,
+          "url": "https://github.com/rohasnagpal/legal-ai-skills",
+          "sample_plugins": "Rohas Legal AI: Contracts, Rohas Legal AI: Litigation, Rohas Legal AI: Advisory"
+        },
+        {
+          "provider": "App developer",
+          "plugin_count": 19,
+          "category_count": 7,
+          "url": null,
+          "sample_plugins": "OpenAI Certified, Apple Music, Adobe Acrobat"
+        },
+        {
+          "provider": "BEIKE YAN",
+          "plugin_count": 17,
+          "category_count": 2,
+          "url": null,
+          "sample_plugins": "API Documentation Checker, AI Delivery Evidence Checker, RFP Response Checker"
+        },
+        {
+          "provider": "SonicJobs Inc.",
+          "plugin_count": 13,
+          "category_count": 2,
+          "url": null,
+          "sample_plugins": "SonicJobs, Disney Careers, Dell Tech Careers"
+        },
+        {
+          "provider": "Yaps AI",
+          "plugin_count": 12,
+          "category_count": 2,
+          "url": "https://www.yaps.ai/codex?utm_source=codex&utm_medium=plugin&utm_campaign=official_plugins",
+          "sample_plugins": "Yaps Memory, Yaps Dictation, Yaps Transcription"
+        },
+        {
+          "provider": "Pyxl",
+          "plugin_count": 11,
+          "category_count": 6,
+          "url": null,
+          "sample_plugins": "Astro Scope: Astrology, RewriteLy Humanizer, IHate.ai Humanaizer"
+        }
+      ],
+      "repo_categories": [
+        {
+          "category": "開発者ツール",
+          "count": 24,
+          "rank": 1,
+          "share": 0.3870967741935484
+        },
+        {
+          "category": "生産性",
+          "count": 12,
+          "rank": 2,
+          "share": 0.1935483870967742
+        },
+        {
+          "category": "クリエイティブ",
+          "count": 9,
+          "rank": 3,
+          "share": 0.14516129032258066
+        },
+        {
+          "category": "コミュニケーション",
+          "count": 5,
+          "rank": 4,
+          "share": 0.08064516129032258
+        },
+        {
+          "category": "教育・研究",
+          "count": 4,
+          "rank": 5,
+          "share": 0.06451612903225806
+        },
+        {
+          "category": "データ＆分析",
+          "count": 3,
+          "rank": 6,
+          "share": 0.04838709677419355
+        },
+        {
+          "category": "金融",
+          "count": 2,
+          "rank": 7,
+          "share": 0.03225806451612903
+        },
+        {
+          "category": "ビジネス＆運用",
+          "count": 1,
+          "rank": 8,
+          "share": 0.016129032258064516
+        },
+        {
+          "category": "科学研究",
+          "count": 1,
+          "rank": 9,
+          "share": 0.016129032258064516
+        },
+        {
+          "category": "セキュリティ",
+          "count": 1,
+          "rank": 10,
+          "share": 0.016129032258064516
+        }
+      ],
+      "category_positioning": [
+        {
+          "category": "開発者ツール",
+          "universal_count": 267,
+          "universal_share": 0.0806159420289855,
+          "git_count": 24,
+          "git_share": 0.3870967741935484,
+          "share_delta": 0.3064808321645629,
+          "relative_emphasis": "Git 高比率"
+        },
+        {
+          "category": "ビジネス＆運用",
+          "universal_count": 623,
+          "universal_share": 0.18810386473429952,
+          "git_count": 1,
+          "git_share": 0.016129032258064516,
+          "share_delta": -0.17197483247623502,
+          "relative_emphasis": "ユニバーサル高比率"
+        },
+        {
+          "category": "その他",
+          "universal_count": 439,
+          "universal_share": 0.13254830917874397,
+          "git_count": 0,
+          "git_share": 0,
+          "share_delta": -0.13254830917874397,
+          "relative_emphasis": "ユニバーサル高比率"
+        },
+        {
+          "category": "クリエイティブ",
+          "universal_count": 126,
+          "universal_share": 0.03804347826086957,
+          "git_count": 9,
+          "git_share": 0.14516129032258066,
+          "share_delta": 0.10711781206171109,
+          "relative_emphasis": "Git 高比率"
+        },
+        {
+          "category": "旅行",
+          "universal_count": 268,
+          "universal_share": 0.08091787439613526,
+          "git_count": 0,
+          "git_share": 0,
+          "share_delta": -0.08091787439613526,
+          "relative_emphasis": "ユニバーサル高比率"
+        },
+        {
+          "category": "コミュニケーション",
+          "universal_count": 26,
+          "universal_share": 0.00785024154589372,
+          "git_count": 5,
+          "git_share": 0.08064516129032258,
+          "share_delta": 0.07279491974442887,
+          "relative_emphasis": "Git 高比率"
+        },
+        {
+          "category": "金融",
+          "universal_count": 337,
+          "universal_share": 0.10175120772946859,
+          "git_count": 2,
+          "git_share": 0.03225806451612903,
+          "share_delta": -0.06949314321333956,
+          "relative_emphasis": "ユニバーサル高比率"
+        },
+        {
+          "category": "エンターテインメント",
+          "universal_count": 111,
+          "universal_share": 0.03351449275362319,
+          "git_count": 0,
+          "git_share": 0,
+          "share_delta": -0.03351449275362319,
+          "relative_emphasis": "ユニバーサル高比率"
+        },
+        {
+          "category": "ヘルスケア",
+          "universal_count": 75,
+          "universal_share": 0.022644927536231884,
+          "git_count": 0,
+          "git_share": 0,
+          "share_delta": -0.022644927536231884,
+          "relative_emphasis": "ユニバーサル高比率"
+        },
+        {
+          "category": "生産性",
+          "universal_count": 691,
+          "universal_share": 0.2086352657004831,
+          "git_count": 12,
+          "git_share": 0.1935483870967742,
+          "share_delta": -0.015086878603708914,
+          "relative_emphasis": "ユニバーサル高比率"
+        },
+        {
+          "category": "科学研究",
+          "universal_count": 7,
+          "universal_share": 0.002113526570048309,
+          "git_count": 1,
+          "git_share": 0.016129032258064516,
+          "share_delta": 0.014015505688016208,
+          "relative_emphasis": "Git 高比率"
+        },
+        {
+          "category": "教育・研究",
+          "universal_count": 179,
+          "universal_share": 0.05404589371980676,
+          "git_count": 4,
+          "git_share": 0.06451612903225806,
+          "share_delta": 0.010470235312451302,
+          "relative_emphasis": "Git 高比率"
+        },
+        {
+          "category": "セキュリティ",
+          "universal_count": 26,
+          "universal_share": 0.00785024154589372,
+          "git_count": 1,
+          "git_share": 0.016129032258064516,
+          "share_delta": 0.008278790712170796,
+          "relative_emphasis": "ほぼ同等"
+        },
+        {
+          "category": "データ＆分析",
+          "universal_count": 137,
+          "universal_share": 0.04136473429951691,
+          "git_count": 3,
+          "git_share": 0.04838709677419355,
+          "share_delta": 0.0070223624746766355,
+          "relative_emphasis": "ほぼ同等"
+        }
+      ],
+      "cli_marketplaces": [
+        {
+          "marketplace": "openai-curated",
+          "total": 180
+        },
+        {
+          "marketplace": "openai-bundled",
+          "total": 10
+        },
+        {
+          "marketplace": "openai-primary-runtime",
+          "total": 5
+        }
+      ],
+      "component_counts_chart": [
+        {
+          "component": "直接 Skill エントリポイント",
+          "count": 501
+        },
+        {
+          "component": "App 参照",
+          "count": 74
+        },
+        {
+          "component": "一意の App ID",
+          "count": 54
+        },
+        {
+          "component": "Plugin-level command files",
+          "count": 47
+        },
+        {
+          "component": "MCP server configs",
+          "count": 31
+        },
+        {
+          "component": "Plugin-level agent files",
+          "count": 23
+        },
+        {
+          "component": "Hook declarations",
+          "count": 1
+        }
+      ],
+      "package_index": [
+        {
+          "name": "twilio-developer-kit",
+          "display_name": "Twilio Developer Kit",
+          "provider": "Twilio",
+          "provider_scope": "サードパーティ",
+          "category": "開発者ツール",
+          "url": "https://www.twilio.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 55,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "vercel",
+          "display_name": "Vercel",
+          "provider": "Vercel Labs",
+          "provider_scope": "サードパーティ",
+          "category": "開発者ツール",
+          "url": "https://vercel.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 54,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 11,
+          "agent_files": 6
+        },
+        {
+          "name": "life-science-research",
+          "display_name": "Life Science Research",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "教育・研究",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 50,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "zoom",
+          "display_name": "Zoom",
+          "provider": "Zoom",
+          "provider_scope": "サードパーティ",
+          "category": "コミュニケーション",
+          "url": "https://zoom.us/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 27,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 26,
+          "agent_files": 3
+        },
+        {
+          "name": "public-equity-investing",
+          "display_name": "Public Equity Investing",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "金融",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 23,
+          "app_references": 15,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "shopify",
+          "display_name": "Shopify",
+          "provider": "Shopify",
+          "provider_scope": "サードパーティ",
+          "category": "ビジネス＆運用",
+          "url": "https://shopify.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 20,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "build-web-data-visualization",
+          "display_name": "Build Web Data Visualization",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "開発者ツール",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 18,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 1
+        },
+        {
+          "name": "ngs-analysis",
+          "display_name": "Life Sciences NGS Analysis",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "教育・研究",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 18,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "data-analytics",
+          "display_name": "Data Analytics",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "データ＆分析",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 15,
+          "app_references": 23,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "codex-security",
+          "display_name": "Codex Security",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "セキュリティ",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 14,
+          "app_references": 4,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "superpowers",
+          "display_name": "Superpowers",
+          "provider": "Jesse Vincent",
+          "provider_scope": "サードパーティ",
+          "category": "開発者ツール",
+          "url": "https://github.com/obra/superpowers",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 14,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "expo",
+          "display_name": "Expo",
+          "provider": "Expo",
+          "provider_scope": "サードパーティ",
+          "category": "開発者ツール",
+          "url": "https://expo.dev/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 13,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 1,
+          "agent_files": 1
+        },
+        {
+          "name": "figma",
+          "display_name": "Figma",
+          "provider": "Figma",
+          "provider_scope": "サードパーティ",
+          "category": "クリエイティブ",
+          "url": "https://www.figma.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 12,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 4,
+          "agent_files": 5
+        },
+        {
+          "name": "nvidia",
+          "display_name": "NVIDIA",
+          "provider": "NVIDIA",
+          "provider_scope": "サードパーティ",
+          "category": "開発者ツール",
+          "url": "https://www.nvidia.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 12,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "remotion",
+          "display_name": "Remotion",
+          "provider": "Remotion",
+          "provider_scope": "サードパーティ",
+          "category": "クリエイティブ",
+          "url": "https://remotion.dev/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 12,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "build-macos-apps",
+          "display_name": "Build macOS Apps",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "開発者ツール",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 11,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 3,
+          "agent_files": 1
+        },
+        {
+          "name": "product-design",
+          "display_name": "Product Design",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "クリエイティブ",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 10,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 1
+        },
+        {
+          "name": "build-ios-apps",
+          "display_name": "Build iOS Apps",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "開発者ツール",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 9,
+          "app_references": 0,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 1
+        },
+        {
+          "name": "cloudflare",
+          "display_name": "Cloudflare",
+          "provider": "Cloudflare",
+          "provider_scope": "サードパーティ",
+          "category": "開発者ツール",
+          "url": "https://workers.cloudflare.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 9,
+          "app_references": 0,
+          "mcp_servers": 1,
+          "command_files": 2,
+          "agent_files": 0
+        },
+        {
+          "name": "game-studio",
+          "display_name": "Game Studio",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "開発者ツール",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 9,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "canva",
+          "display_name": "Canva",
+          "provider": "Canva Pty Ltd.",
+          "provider_scope": "サードパーティ",
+          "category": "クリエイティブ",
+          "url": "https://www.canva.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 8,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "boltz-api-cli",
+          "display_name": "Boltz",
+          "provider": "Boltz",
+          "provider_scope": "サードパーティ",
+          "category": "科学研究",
+          "url": "https://boltz.bio/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 8,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "stripe",
+          "display_name": "Stripe",
+          "provider": "Stripe",
+          "provider_scope": "サードパーティ",
+          "category": "金融",
+          "url": "https://stripe.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 7,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "adobe",
+          "display_name": "Adobe",
+          "provider": "Adobe Inc",
+          "provider_scope": "サードパーティ",
+          "category": "クリエイティブ",
+          "url": "https://www.adobe.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 6,
+          "app_references": 1,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "dropbox",
+          "display_name": "Dropbox",
+          "provider": "Dropbox",
+          "provider_scope": "サードパーティ",
+          "category": "生産性",
+          "url": "https://www.dropbox.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 6,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "build-web-apps",
+          "display_name": "Build Web Apps",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "開発者ツール",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 6,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 1
+        },
+        {
+          "name": "google-drive",
+          "display_name": "Google Drive",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "生産性",
+          "url": "https://workspace.google.com/products/drive/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 5,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "openai-developers",
+          "display_name": "OpenAI Developers",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "開発者ツール",
+          "url": "https://platform.openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 5,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "hyperframes",
+          "display_name": "HyperFrames by HeyGen",
+          "provider": "HeyGen",
+          "provider_scope": "サードパーティ",
+          "category": "クリエイティブ",
+          "url": "https://hyperframes.heygen.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 5,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "plugin-eval",
+          "display_name": "Plugin Eval",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "開発者ツール",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 5,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "notion",
+          "display_name": "Notion",
+          "provider": "Notion",
+          "provider_scope": "サードパーティ",
+          "category": "生産性",
+          "url": "https://www.notion.so/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 4,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 1
+        },
+        {
+          "name": "circleci",
+          "display_name": "CircleCI",
+          "provider": "CircleCI",
+          "provider_scope": "サードパーティ",
+          "category": "開発者ツール",
+          "url": "https://circleci.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 4,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "mixpanel-headless",
+          "display_name": "Mixpanel Headless",
+          "provider": "Mixpanel",
+          "provider_scope": "サードパーティ",
+          "category": "データ＆分析",
+          "url": "https://mixpanel.com/home",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 4,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "temporal",
+          "display_name": "Temporal",
+          "provider": "Temporal",
+          "provider_scope": "サードパーティ",
+          "category": "開発者ツール",
+          "url": "https://temporal.io/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 4,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "airtable",
+          "display_name": "Airtable",
+          "provider": "Airtable",
+          "provider_scope": "サードパーティ",
+          "category": "生産性",
+          "url": "https://airtable.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 3,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "higgsfield",
+          "display_name": "Higgsfield",
+          "provider": "Higgsfield AI, Inc.",
+          "provider_scope": "サードパーティ",
+          "category": "クリエイティブ",
+          "url": "https://higgsfield.ai/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 3,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "supabase",
+          "display_name": "Supabase",
+          "provider": "Supabase",
+          "provider_scope": "サードパーティ",
+          "category": "開発者ツール",
+          "url": "https://supabase.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 2,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "creative-production",
+          "display_name": "Creative Production",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "クリエイティブ",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 2,
+          "app_references": 0,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "test-android-apps",
+          "display_name": "Test Android Apps",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "開発者ツール",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 2,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 1
+        },
+        {
+          "name": "posthog",
+          "display_name": "PostHog",
+          "provider": "PostHog Inc.",
+          "provider_scope": "サードパーティ",
+          "category": "データ＆分析",
+          "url": "https://posthog.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 1,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "chatcut",
+          "display_name": "ChatCut",
+          "provider": "ChatCut",
+          "provider_scope": "サードパーティ",
+          "category": "クリエイティブ",
+          "url": "https://chatcut.io/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 1,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "coderabbit",
+          "display_name": "CodeRabbit",
+          "provider": "CodeRabbit",
+          "provider_scope": "サードパーティ",
+          "category": "開発者ツール",
+          "url": "https://coderabbit.ai/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 1,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "magicpath",
+          "display_name": "MagicPath",
+          "provider": "MagicPathAI",
+          "provider_scope": "サードパーティ",
+          "category": "開発者ツール",
+          "url": "https://www.magicpath.ai/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 1,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "openai-ads-conversions",
+          "display_name": "OpenAI Ads Conversions",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "開発者ツール",
+          "url": "https://developers.openai.com/ads/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 1,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "sentry",
+          "display_name": "Sentry",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "開発者ツール",
+          "url": "https://sentry.io/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 1,
+          "app_references": 0,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "zotero",
+          "display_name": "Zotero",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "教育・研究",
+          "url": "https://openai.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 1,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "github",
+          "display_name": "GitHub",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "開発者ツール",
+          "url": "https://github.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 2,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "atlassian-rovo",
+          "display_name": "Atlassian Rovo",
+          "provider": "Atlassian",
+          "provider_scope": "サードパーティ",
+          "category": "生産性",
+          "url": "https://www.atlassian.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 1
+        },
+        {
+          "name": "clickup",
+          "display_name": "ClickUp",
+          "provider": "ClickUp",
+          "provider_scope": "サードパーティ",
+          "category": "生産性",
+          "url": "https://clickup.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "consensus",
+          "display_name": "Consensus",
+          "provider": "Consensus",
+          "provider_scope": "サードパーティ",
+          "category": "教育・研究",
+          "url": "https://consensus.app/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "datadog",
+          "display_name": "Datadog (Preview)",
+          "provider": "Datadog",
+          "provider_scope": "サードパーティ",
+          "category": "開発者ツール",
+          "url": "https://www.datadoghq.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "gmail",
+          "display_name": "Gmail",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "コミュニケーション",
+          "url": "https://workspace.google.com/products/gmail/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "google-calendar",
+          "display_name": "Google Calendar",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "生産性",
+          "url": "https://workspace.google.com/products/calendar/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "granola",
+          "display_name": "Granola",
+          "provider": "Granola",
+          "provider_scope": "サードパーティ",
+          "category": "生産性",
+          "url": "https://www.granola.ai/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "linear",
+          "display_name": "Linear",
+          "provider": "Linear Orbit, Inc",
+          "provider_scope": "サードパーティ",
+          "category": "生産性",
+          "url": "https://linear.app/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "lovable",
+          "display_name": "Lovable",
+          "provider": "Lovable Labs",
+          "provider_scope": "サードパーティ",
+          "category": "開発者ツール",
+          "url": "https://lovable.dev/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "monday-com",
+          "display_name": "monday.com",
+          "provider": "monday.com",
+          "provider_scope": "サードパーティ",
+          "category": "生産性",
+          "url": "https://monday.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "outlook-calendar",
+          "display_name": "Outlook Calendar",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "生産性",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/outlook/calendar-app",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "outlook-email",
+          "display_name": "Outlook Email",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "コミュニケーション",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "sharepoint",
+          "display_name": "SharePoint",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "生産性",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "slack",
+          "display_name": "Slack",
+          "provider": "Slack",
+          "provider_scope": "サードパーティ",
+          "category": "コミュニケーション",
+          "url": "https://slack.com/",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 1,
+          "command_files": 0,
+          "agent_files": 0
+        },
+        {
+          "name": "teams",
+          "display_name": "Teams",
+          "provider": "OpenAI",
+          "provider_scope": "OpenAI",
+          "category": "コミュニケーション",
+          "url": "https://www.microsoft.com/en-us/microsoft-teams/group-chat-software",
+          "url_source": "interface.websiteURL",
+          "skill_entrypoints": 0,
+          "app_references": 1,
+          "mcp_servers": 0,
+          "command_files": 0,
+          "agent_files": 0
+        }
+      ],
+      "package_archetypes": [
+        {
+          "architecture": "Skills のみ",
+          "package_count": 24,
+          "share": 0.3870967741935484,
+          "openai_packages": 11,
+          "third_party_packages": 13,
+          "skill_entrypoints": 265,
+          "app_references": 0,
+          "mcp_servers": 0,
+          "examples": "Boltz, Build macOS Apps, Build Web Apps, Build Web Data Visualization"
+        },
+        {
+          "architecture": "Skills + Apps + MCP",
+          "package_count": 16,
+          "share": 0.25806451612903225,
+          "openai_packages": 4,
+          "third_party_packages": 12,
+          "skill_entrypoints": 186,
+          "app_references": 41,
+          "mcp_servers": 16,
+          "examples": "Airtable, Canva, Codex Security, Data Analytics"
+        },
+        {
+          "architecture": "Apps + MCP",
+          "package_count": 11,
+          "share": 0.1774193548387097,
+          "openai_packages": 3,
+          "third_party_packages": 8,
+          "skill_entrypoints": 0,
+          "app_references": 12,
+          "mcp_servers": 11,
+          "examples": "Atlassian Rovo, ClickUp, Consensus, Datadog (Preview)"
+        },
+        {
+          "architecture": "Apps のみ",
+          "package_count": 5,
+          "share": 0.08064516129032258,
+          "openai_packages": 4,
+          "third_party_packages": 1,
+          "skill_entrypoints": 0,
+          "app_references": 5,
+          "mcp_servers": 0,
+          "examples": "Lovable, Outlook Calendar, Outlook Email, SharePoint"
+        },
+        {
+          "architecture": "Skills + MCP",
+          "package_count": 4,
+          "share": 0.06451612903225806,
+          "openai_packages": 3,
+          "third_party_packages": 1,
+          "skill_entrypoints": 21,
+          "app_references": 0,
+          "mcp_servers": 4,
+          "examples": "Build iOS Apps, Cloudflare, Creative Production, Sentry"
+        },
+        {
+          "architecture": "Skills + Apps",
+          "package_count": 2,
+          "share": 0.03225806451612903,
+          "openai_packages": 1,
+          "third_party_packages": 1,
+          "skill_entrypoints": 29,
+          "app_references": 16,
+          "mcp_servers": 0,
+          "examples": "Adobe, Public Equity Investing"
+        }
+      ],
+      "interfaces": [
+        {
+          "layer": "Plugin JSON-RPC requests",
+          "count": 12,
+          "examples": "plugin/install, plugin/installed, plugin/list, plugin/read, plugin/search, plugin/share/checkout, plugin/share/delete, plugin/share/list, plugin/share/save, plugin/share/updateTargets, plugin/skill/read, plugin/uninstall"
+        },
+        {
+          "layer": "Codex CLI leaf commands",
+          "count": 7,
+          "examples": "plugin add/list/remove; marketplace add/list/upgrade/remove"
+        },
+        {
+          "layer": "App JSON-RPC requests",
+          "count": 3,
+          "examples": "app/installed, app/list, app/read"
+        },
+        {
+          "layer": "Marketplace JSON-RPC requests",
+          "count": 3,
+          "examples": "marketplace/add, marketplace/remove, marketplace/upgrade"
+        },
+        {
+          "layer": "App notifications",
+          "count": 1,
+          "examples": "app/list/updated"
+        },
+        {
+          "layer": "TUI slash commands",
+          "count": 1,
+          "examples": "/plugins"
+        }
+      ],
+      "api_exclusions": [
+        {
+          "plugin": "adobe",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "airtable",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "creative-production",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "data-analytics",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "github",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "gmail",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "google-calendar",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "google-drive",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "lovable",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "outlook-calendar",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "outlook-email",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "public-equity-investing",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "sharepoint",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "shopify",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "teams",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        },
+        {
+          "plugin": "zoom",
+          "standardMarketplace": "含む",
+          "apiKeyMarketplace": "除外"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "summary_sql",
+      "label": "監査主要指標",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 1 row because the dashboard headline snapshot is a singleton.\nSELECT\n  universal_plugins,\n  raw_plugins,\n  hidden_bundled,\n  cli_plugins,\n  repo_plugins,\n  api_plugins,\n  api_coverage,\n  productivity_plugins,\n  business_ops_plugins,\n  top_two_category_share,\n  git_developer_plugins,\n  git_developer_share,\n  skill_entrypoints,\n  plugins_with_skills,\n  app_references_total,\n  unique_app_ids,\n  third_party_plugins,\n  third_party_share,\n  distinct_third_party_providers,\n  provider_website_linked,\n  provider_website_coverage,\n  git_third_party_packages,\n  git_third_party_share,\n  third_party_app_references,\n  third_party_app_share,\n  git_url_coverage\nFROM summary;",
+        "description": "Selects the reviewed summary rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "summary"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": [
+          "各主要指標は、指定された市場ソースまたはカタログ表示の分母を保持します。"
+        ]
+      }
+    },
+    {
+      "id": "inventory_planes_sql",
+      "label": "市場ソース照合",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 5 rows because the audit defines five distinct market sources and catalog views.\nSELECT plane, source, total, freshness\nFROM inventory_planes\nORDER BY total DESC, plane ASC;",
+        "description": "Selects the reviewed inventory_planes rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "inventory_planes"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": []
+      }
+    },
+    {
+      "id": "tui_categories_sql",
+      "label": "TUI 表示プラグインカテゴリ",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: one row per TUI-visible universal-directory category.\nSELECT category, count, rank, share\nFROM tui_categories\nORDER BY count DESC, category ASC;",
+        "description": "Selects the reviewed tui_categories rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "tui_categories"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": []
+      }
+    },
+    {
+      "id": "third_party_categories_sql",
+      "label": "サードパーティプロバイダーカテゴリ",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 14 rows because third-party packages span all 14 universal-directory categories.\nSELECT category, plugin_count, provider_count, share\nFROM third_party_categories\nORDER BY plugin_count DESC, category ASC;",
+        "description": "Selects the reviewed third_party_categories rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "third_party_categories"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": [
+          "Third-party requires a non-empty developerName that is not normalized to OpenAI.",
+          "Provider count is distinct developerName within each category."
+        ]
+      }
+    },
+    {
+      "id": "top_third_party_providers_sql",
+      "label": "上位サードパーティプロバイダー",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 8 rows because the dashboard keeps a bounded top-provider comparison.\nSELECT provider, plugin_count, category_count, url, sample_plugins\nFROM top_third_party_providers\nORDER BY plugin_count DESC, category_count DESC, provider ASC;",
+        "description": "Selects the reviewed top_third_party_providers rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "top_third_party_providers"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": []
+      }
+    },
+    {
+      "id": "category_positioning_sql",
+      "label": "市場間カテゴリポジショニング",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 14 rows because the union contains 14 category names across the two market views.\nWITH categories AS (\n  SELECT category FROM tui_categories\n  UNION\n  SELECT category FROM repo_categories\n),\ncombined AS (\n  SELECT\n    categories.category,\n    COALESCE(tui_categories.count, 0) AS universal_count,\n    COALESCE(tui_categories.share, 0.0) AS universal_share,\n    COALESCE(repo_categories.count, 0) AS git_count,\n    COALESCE(repo_categories.share, 0.0) AS git_share\n  FROM categories\n  LEFT JOIN tui_categories USING (category)\n  LEFT JOIN repo_categories USING (category)\n)\nSELECT\n  category,\n  universal_count,\n  universal_share,\n  git_count,\n  git_share,\n  git_share - universal_share AS share_delta,\n  CASE\n    WHEN git_share - universal_share > 0.01 THEN 'Git over-index'\n    WHEN git_share - universal_share < -0.01 THEN 'Universal over-index'\n    ELSE 'Near parity'\n  END AS relative_emphasis\nFROM combined\nORDER BY ABS(git_share - universal_share) DESC, category ASC;",
+        "description": "Selects the reviewed category_positioning rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "category_positioning"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": [
+          "Universal share uses 3,312 TUI-visible plugin rows as its denominator.",
+          "Git share uses 62 standard marketplace packages as its denominator.",
+          "Relative emphasis compares the two fractional shares at the same category grain."
+        ]
+      }
+    },
+    {
+      "id": "cli_marketplaces_sql",
+      "label": "CLI マーケットカタログ行",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 3 rows because the CLI reports three configured marketplace catalogs.\nSELECT marketplace, total\nFROM cli_marketplaces\nORDER BY total DESC, marketplace ASC;",
+        "description": "Selects the reviewed cli_marketplaces rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "cli_marketplaces"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": []
+      }
+    },
+    {
+      "id": "component_counts_chart_sql",
+      "label": "プラグインパッケージ面比較",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 7 rows because the chart compares seven overlapping plugin package surfaces.\nSELECT component, count\nFROM component_counts_chart\nORDER BY count DESC, component ASC;",
+        "description": "Selects the reviewed component_counts_chart rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "component_counts_chart"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": []
+      }
+    },
+    {
+      "id": "package_index_sql",
+      "label": "公式 Git パッケージ能力索引",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 62 rows because the official Git marketplace contains 62 package manifests.\nSELECT\n  name,\n  display_name,\n  provider,\n  provider_scope,\n  category,\n  url,\n  url_source,\n  skill_entrypoints,\n  app_references,\n  mcp_servers,\n  command_files,\n  agent_files\nFROM package_index\nORDER BY skill_entrypoints DESC, app_references DESC, name ASC;",
+        "description": "Selects the reviewed package_index rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "package_index"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": [
+          "Package URLs use interface.websiteURL, then homepage, repository, and author.url.",
+          "Provider scope uses manifest developer/author metadata only."
+        ]
+      }
+    },
+    {
+      "id": "package_archetypes_sql",
+      "label": "パッケージ能力アーキタイプ",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 6 rows because the 62 package manifests occupy six mutually exclusive Skills/Apps/MCP combinations.\nSELECT\n  architecture,\n  package_count,\n  share,\n  openai_packages,\n  third_party_packages,\n  skill_entrypoints,\n  app_references,\n  mcp_servers,\n  examples\nFROM package_archetypes\nORDER BY package_count DESC, architecture ASC;",
+        "description": "Selects the reviewed package_archetypes rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "package_archetypes"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": [
+          "Each package belongs to one mutually exclusive archetype based on manifest-declared Skills, Apps, and MCP presence.",
+          "Provider and component totals are aggregated within the same 62-package denominator."
+        ]
+      }
+    },
+    {
+      "id": "interfaces_sql",
+      "label": "Codex プラグインインターフェース一覧",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: 6 rows because the audit separates six CLI, TUI, request, and notification layers.\nSELECT layer, count, examples\nFROM interfaces\nORDER BY count DESC, layer ASC;",
+        "description": "Selects the reviewed interfaces rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "interfaces"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": []
+      }
+    },
+    {
+      "id": "api_exclusions_sql",
+      "label": "API-key マーケットプレイス除外",
+      "path": "queries/dashboard.sql",
+      "query": {
+        "engine": "SQLite via node:sqlite",
+        "sql": "-- EXPECTED: one row per standard-marketplace name excluded from the API-key subset.\nSELECT plugin, standardMarketplace, apiKeyMarketplace\nFROM api_exclusions\nORDER BY plugin ASC;",
+        "description": "Selects the reviewed api_exclusions rows from the normalized audit snapshot.",
+        "language": "sql",
+        "executed_at": "2026-08-28T04:36:36.273Z",
+        "tables_used": [
+          "api_exclusions"
+        ],
+        "filters": [
+          "Point-in-time audit snapshot generated by scripts/collect.mjs."
+        ],
+        "metric_definitions": []
+      }
+    },
+    {
+      "id": "pty_observation",
+      "label": "Codex PTY /plugins 直接観測",
+      "path": "evidence/pty-observation.json"
+    },
+    {
+      "id": "official_docs",
+      "label": "OpenAI 公式プラグイン文書",
+      "href": "https://learn.chatgpt.com/docs/plugins"
+    }
+  ]
+}
