@@ -57,6 +57,30 @@ To rebuild only from the committed snapshot:
 npm run build
 ```
 
+To run the same self-contained checks used by pull requests and assemble the Vercel bundle:
+
+```bash
+npm run ci
+```
+
+## CI/CD and public deployment
+
+- GitHub repository: <https://github.com/lwyBZss8924d/codex-plugins-market-data>
+- Vercel team: [`sj112358s-projects`](https://vercel.com/sj112358s-projects)
+- Vercel project: `codex-chatgpt-plugins-index`
+- Production site: <https://codex-chatgpt-plugins-index.vercel.app>
+
+The [CI workflow](.github/workflows/ci.yml) runs on every pull request and every push to `main`. It validates the committed snapshot and SQLite-backed artifact, checks all four enhanced reports, builds the bounded `dist/` publication bundle, and verifies that account-local plugin state is absent.
+
+Vercel Git integration owns deployment automation: pull-request branches receive preview deployments and the merged `main` branch receives the production deployment. No Vercel credential is stored in this repository or required by the GitHub Actions workflow. The static build publishes only `index.html`, the four named report entry points, and `README.md`.
+
+Public Git notes intentionally cover only the first remote root commit and CI/CD deployment events. To inspect them:
+
+```bash
+git fetch origin refs/notes/commits:refs/notes/commits
+git log --show-notes=commits -1
+```
+
 For local review, serve the repository and open the generated dashboard:
 
 ```bash
